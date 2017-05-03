@@ -1,10 +1,11 @@
 $(document).ready(function(){
-		document.getElementById("orden").setAttribute("hidden","true");
        $('.carousel.carousel-slider').carousel({fullWidth: true});
         $(".button-collapse").sideNav({
 	      menuWidth: 150, 
 	    });
     });
+
+document.getElementById("orden").setAttribute("hidden","true");
 
 // Array con los ids de los checkbox
 var ids=["brioche","concha","cuernito","dona1","dona2","muffin","chilaquiles","campesino","huevos","panini","club","vegetariano","cheesecake","pastel","frutas1","frutas2","hotCakes","tarta","caldo","ensaladaMexicana","ensaladaChef","sopaTortilla","sopaHuerta","sopaEspecial","camarones","cecina","enchiladas","filetePescado","milanesa","tacos","malteada","smoothie","helado","banana","teFrio","raspado","caldoOlla","consome","ensaladaPollo","quesoFundido","sopaFideo","sopaHongos","alitas","hamburguesa","milanesaHawaiana","molletes","omelett","sandwich","cheesecakeFresa","cheesecakeGuayaba","crepaHelado","crepas","payLimon","Waffles","cerveza","margarita","mojitos","vinoTinto","piñaColada","vodkaSabores","cafeAmericano","expresso","chocolate","teOrganico","capuccino","tizana","teFrutos","aguasSabor","refresco","smoothie","frapuccino","jugosNaturales"];
