@@ -1,0 +1,116 @@
+.miContainer{
+	margin-left:5vw;
+	margin-right: 5vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+body{
+	background-image: url("../images/Fondo.jpg");
+	font-family: 'Amatic SC', cursive;
+	font-weight: 700;
+}
+th, #bot{
+	font-size: 30px;
+}
+.brand-logo, #logo{
+	font-family: 'Grand Hotel', cursive;
+}
+#letra{
+	font-family: 'Josefin Slab', serif;
+	font-weight: 700;
+}
+.brand-logo{
+	margin-left: 5%;
+}
+
+
+nav{
+	margin-top: 5%;
+}
+ul li a{
+	font-size: 20px;
+}
+
+pre {
+    background-color:#F1F1F1;
+    border:1px solid #00000;
+    padding:10px;
+    height: 300px;
+		width: 530px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    margin:7px;
+    color:#3b3d3e;
+
+}
+
+.portada {
+    background-image: url("../images/FondoPortada.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#trans{
+	background-color: rgba(115, 109, 113, 0.68);
+}
+.img1{
+	background-image: url("../images/desayuno.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height:auto;
+}
+
+.img2{
+	background-image: url("../images/comi.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.img3{
+	background-image: url("../images/cenas.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.img4{
+	background-image: url("../images/portada.png");
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.carta{
+	display: flex;
+	margin-top: 10px;
+	flex-direction: column;
+
+}
+
+.columna{
+	display: flex;
+}
+.card{
+	margin-right:1%;
+	margin-left:1%;
+	flex-grow: 1;
+}
+#tabla{
+	font-size: 20px;
+}
+
+#t {
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;
+}
+
+#orden{
+	background-color: white;
+}
+/* Small screens */
+@media all and (max-width: 500px) {
+  .columna {
+    /* On small screens, we are no longer using row direction but column */
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

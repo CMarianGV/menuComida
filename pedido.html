@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Slab:400,600,700" rel="stylesheet">
+	<title>Gondola</title>
+</head>
+<body>
+	<div class=miContainer>
+	<!-- Dropdown Structure -->
+	<ul id="menuDesayuno" class="dropdown-content">
+	  <li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuDesayunoMovil" class="dropdown-content">
+	  <li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuComida" class="dropdown-content">
+	  <li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuComidaMovil" class="dropdown-content">
+	  <li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuCena" class="dropdown-content">
+	  <li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuCenaMovil" class="dropdown-content">
+	  <li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuBebidas" class="dropdown-content">
+	  <li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+	</ul>
+	<ul id="menuBebidasMovil" class="dropdown-content">
+	  <li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+	</ul>
+
+	<!--Barra de navegación del restaurante, se podra mover a la sección que se desee
+	   realizado mediente una lista que mandan a llamar a las id's de cada lista de los menus
+	   mediante el data-activates-->
+	<nav class="red darken-3"><!--Etiqueta para la barra de la vegación la clase ayuda al diseño-->
+	  <div class="nav-wrapper "><!--clases que nos ayudan en el diseño-->
+	  <!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
+				principal de la aplicación-->
+	    <a href="index.html" class="brand-logo hide-on-small-only"> Gondola Restaurant </a>
+	    <a href="index.html" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">Gondola Restaurant</i></a>
+	    <div class="row">
+	    	<!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
+	    	<ul class="right hide-on-med-and-down">
+
+				<li><a class="dropdown-button" data-activates="menuDesayuno">Desayunos</a></li>
+				<li><a class="dropdown-button" data-activates="menuComida">Comidas</a></li>
+				<li><a class="dropdown-button" data-activates="menuCena">Cenas</a></li>
+				<li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
+				<li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+				<li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+
+	    	</ul>
+	    	<ul class="side-nav" id="mobile-demo">
+		        <li><a class="dropdown-button" data-activates="menuDesayunoMovil">Desayunos</a></li>
+		        <li><a class="dropdown-button" data-activates="menuComidaMovil" >Comidas</a></li>
+		        <li><a class="dropdown-button" data-activates="menuCenaMovil">Cenas</a></li>
+		        <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
+		        <li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+				<li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+<!--En esta sección, es en la cual los comensales, despues de revisar el menú, podran elegir sus alimentos
+de acuerdo a lo que ellos selecciones y podran confirmar su pedido-->
+<!--Primero se hace un formulario que va a contener todas las cartas con cada uno de los alimentos del
+ dia con sus respectivos tiempos (entrada, comida, postre)-->
+	<form id="frmCarta">
+	<div class="carta">
+		<div class="columna">
+			<div class="card">
+			    <div class="card-image">
+					<img src="../images/desayuno/desayuno.png" class="responsive-img">
+						<span class="card-title red darken-4">Desayunos</span> <!--esta es la carta de los desayunos-->
+				</div>
+				<div class="card-content">
+
+						<h4 class="red-text text-darken-4">Entradas</h4> <!--Lista de enetradas del desayuno-->
+						<!--Cada lista que se puede visualizar, esta realizada con un input del tipo checkbox y un label
+						que nos permite visualizar el nombre del platillo-->
+						<!-- Input tipo checkbox para seleccionar la comida deseada -->
+					    <p>
+					    	<!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+					      <input type="checkbox" id="brioche" value='{"descripcion":"Brioche de Manzana","precio":25}'/>
+					      <label for="brioche">Brioche de Manzana $25</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="concha" value='{"descripcion":"Concha Integral","precio":20}' />
+					      <label for="concha">Concha Integral $20</label>
+					    </p>
+					    <p>
+								<!--La propiedad Value en el input manda dos variables con sus respectivos
+								valores (descripcion y precio) que seran utilizados en el archivo app.js-->
+					      <input type="checkbox" id="cuernito" value='{"descripcion":"Cuernito","precio":22}'/>
+					      <label for="cuernito">Cuernito $22</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="dona1" value='{"descripcion":"Dona Glaseada 1","precio":25}'/>
+					      <label for="dona1">Dona Glaseada 1 $25</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="dona2" value='{"descripcion":"Dona glaseada 2","precio":20}'/>
+					      <label for="dona2">Dona glaseada 2 $20</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="muffin" value='{"descripcion":"Muffin","precio":23}'/>
+					      <label for="muffin">Muffin $23</label>
+					    </p>
+
+
+					    <h4 class="red-text text-darken-4">Platos fuertes</h4><!--Lista de los platos fuertes del desayuno-->
+					    <p>
+					      <input type="checkbox" id="chilaquiles" value='{"descripcion":"Chilaquiles","precio":90}' />
+					      <label for="chilaquiles">Chilaquiles $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="campesino" value='{"descripcion":"Desayuno Campesino","precio":100}' />
+					      <label for="campesino">Desayuno Campesino $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="huevos" value='{"descripcion":"Huevos Combinados","precio":90}'/>
+					      <label for="huevos">Huevos Combinados $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="panini" value='{"descripcion":"Panini","precio":120}'/>
+					      <label for="panini">Panini $120</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="club" value='{"descripcion":"Club sandwich","precio":99}'/>
+					      <label for="club">Club sandwich $99</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="vegetariano" value='{"descripcion":"Sandwich vegetariano","precio":110}' />
+					      <label for="vegetariano">Sandwich Vegetariano $110</label>
+					    </p>
+
+					    <h4 class="red-text text-darken-4">Postres</h4><!--Lista de los postres del desayuno-->
+					    <p>
+					      <input type="checkbox" id="cheesecake" value='{"descripcion":"Cheesecake de durazno","precio":90}' />
+					      <label for="cheesecake">Cheesecake de durazno $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="pastel" value='{"descripcion":"Pastel de Chocolate","precio":100}'/>
+					      <label for="pastel">Pastel de Chocolate $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="frutas1" value='{"descripcion":"Coctel de frutas 1","precio":70}'/>
+					      <label for="frutas1">Coctel de frutas 1 $70</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="frutas2" value='{"descripcion":"Coctel de frutas 2","precio":90}'/>
+					      <label for="frutas2">Coctel de frutas 2 $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="hotCakes" value='{"descripcion":"Hot Cakes","precio":70}' />
+					      <label for="hotCakes">Hot Cakes $70</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="tarta" value='{"descripcion":"Tarta de fresa","precio":80}'/>
+					      <label for="tarta">Tarta de fresa $80</label>
+					    </p>
+
+				</div>
+			</div>
+			<!--Esta es la segunda carta donde se pueden seleccionar las comidas de igual forma se muestran las tres enttradas-->
+			<div class="card">
+			    <div class="card-image">
+					<img src="../images/comida/comida.jpg">
+						<span class="card-title red darken-4">Comidas</span>
+				</div>
+				<div class="card-content">
+
+					<h4 class="red-text text-darken-4">Entradas</h4><!--Lista de las entradas de la comida-->
+						<!-- Input tipo checkbox para seleccionar la comida deseada -->
+					    <p>
+					    	<!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+					      <input type="checkbox" id="caldo" value='{"descripcion":"Caldo Tlalpeño","precio":100}'/>
+					      <label for="caldo">Caldo Tlalpeño $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="ensaladaMexicana" value='{"descripcion":"Ensalada Mexicana","precio":100}' />
+					      <label for="ensaladaMexicana">Ensalada Mexicana $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="ensaladaChef" value='{"descripcion":"Ensalada del chef","precio":90}' />
+					      <label for="ensaladaChef">Ensalada del chef $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="sopaTortilla" value='{"descripcion":"Sopa de tortilla","precio":70}'/>
+					      <label for="sopaTortilla">Sopa de tortilla $70</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="sopaHuerta" value='{"descripcion":"Sopa de la huerta","precio":100}'/>
+					      <label for="sopaHuerta">Sopa de la huerta $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="sopaEspecial" value='{"descripcion":"Sopa Especial","precio":100}'/>
+					      <label for="sopaEspecial">Sopa Especial $100</label>
+					    </p>
+
+
+					    <h4 class="red-text text-darken-4">Platos fuertes</h4><!--Lista de los platos fuertes de la comida-->
+					    <p>
+					      <input type="checkbox" id="camarones" value='{"descripcion":"Camarones Empanizados","precio":130}' />
+					      <label for="camarones">Camarones Empanizados $130</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="cecina" value='{"descripcion":"Cecina","precio":120}' />
+					      <label for="cecina">Cecina $120</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="enchiladas" value='{"descripcion":"Enchiladas Suizas","precio":99}'/>
+					      <label for="enchi">Enchiladas Suizas $99</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="filetePescado" value='{"descripcion":"Filete de pescado","precio":135}'/>
+					      <label for="filetePescado">Filete de pescado $135</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="milanesa" value='{"descripcion":"Milanesa de pollo","precio":100}'/>
+					      <label for="milanesa">Milanesa de pollo $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="tacos" value='{"descripcion":"Tacos de arrachera","precio":120}' />
+					      <label for="tacos">Tacos de arrachera $120</label>
+					    </p>
+
+					    <h4 class="red-text text-darken-4">Postres</h4><!--Lista de los postres de la comida-->
+					    <p>
+					      <input type="checkbox" id="malteada" value='{"descripcion":"Malteada","precio":85}' />
+					      <label for="malteada">Malteada $85</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="smoothie" value='{"descripcion":"Smoothie","precio":80}'/>
+					      <label for="smoothie">Smoothie $80</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="helado" value='{"descripcion":"Helado","precio":50}'/>
+					      <label for="helado">Helado $50</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="banana" value='{"descripcion":"Banana Split","precio":95}'/>
+					      <label for="banana">Banana Split $95</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="teFrio" value='{"descripcion":"Té frío","precio":80}' />
+					      <label for="teFrio">Té frío $80</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="raspado" value='{"descripcion":"Raspado de sabores","precio":60}'/>
+					      <label for="raspado">Raspado de sabores $60</label>
+					    </p>
+
+				</div>
+			</div>
+		</div>
+<!--Esta es la carte donde contiene los tres tiempos de la cena-->
+		<div class="columna">
+			<div class="card">
+			    <div class="card-image">
+					<img src="../images/cena/cena.jpg">
+						<span class="card-title red darken-4">Cenas</span>
+				</div>
+				<div class="card-content">
+
+					<h4 class="red-text text-darken-4">Entradas</h4><!--Lista de las entradas de la cena-->
+						<!-- Input tipo checkbox para seleccionar la comida deseada -->
+					    <p>
+					    	<!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+					      <input type="checkbox" id="caldoOlla" value='{"descripcion":"Caldo de olla","precio":89}'/>
+					      <label for="caldoOlla">Caldo de olla $89</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="consome" value='{"descripcion":"Consomé Ranchero","precio":100}' />
+					      <label for="consome">Consomé Ranchero $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="ensaladaPollo" value='{"descripcion":"Ensalada de Pollo","precio":90}' />
+					      <label for="ensaladaPollo">Ensalada de Pollo $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="quesoFundido" value='{"descripcion":"Queso fundido","precio":110}'/>
+					      <label for="quesoFundido">Queso fundido $110</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="sopaFideo" value='{"descripcion":"Sopa de fideo","precio":79}'/>
+					      <label for="sopaFideo">Sopa de fideo $79</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="sopaHongos" value='{"descripcion":"Sopa de hongos","precio":88}'/>
+					      <label for="sopaHongos">Sopa de hongos $88</label>
+					    </p>
+
+
+					    <h4 class="red-text text-darken-4">Platos fuertes</h4><!--Lista de los platos fuertes de la cena-->
+					    <p>
+					      <input type="checkbox" id="alitas" value='{"descripcion":"Alitas","precio":110}' />
+					      <label for="alitas">Alitas $110</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="hamburguesa" value='{"descripcion":"Hamburguesa","precio":90}' />
+					      <label for="hamburguesa">Hamburguesa $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="milanesaHawaiana" value='{"descripcion":"Milanesa Hawaiana","precio":105}'/>
+					      <label for="milanesaHawaiana">Milanesa Hawaiana $105</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="molletes" value='{"descripcion":"Molletes","precio":90}'/>
+					      <label for="molletes">Molletes $90</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="omelett" value='{"descripcion":"Omelett","precio":100}'/>
+					      <label for="omelett">Omelett $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="sandwich" value='{"descripcion":"Sándwich Búfalo","precio":90}' />
+					      <label for="sandwich">Sándwich Búfalo $90</label>
+					    </p>
+
+					    <h4 class="red-text text-darken-4">Postres</h4><!--Lista de los postres de la cena-->
+					    <p>
+					      <input type="checkbox" id="cheesecakeFresa" value='{"descripcion":"Cheesecake de Fresa","precio":80}' />
+					      <label for="cheesecakeFresa">Cheesecake de Fresa $80</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="cheesecakeGuayaba" value='{"descripcion":"Cheesecake de Guayaba","precio":70}'/>
+					      <label for="cheesecakeGuayaba">Cheesecake de Guayaba $70</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="crepaHelado" value='{"descripcion":"Crepa con Helado","precio":85}'/>
+					      <label for="crepaHelado">Crepa con Helado $85</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="crepas" value='{"descripcion":"Crepas","precio":80}'/>
+					      <label for="crepas">Crepas $80</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="payLimon" value='{"descripcion":"Pay de limón","precio":75}' />
+					      <label for="payLimon">Pay de limón $75</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="Waffles" value='{"descripcion":"Waffles","precio":85}'/>
+					      <label for="Waffles">Waffles $85</label>
+					    </p>
+				</div>
+			</div>
+<!--Carta con las bebidas y sus diferentes opciones Calientes, frias y alcoholicas-->
+			<div class="card">
+			    <div class="card-image">
+					<img src="../images/bebidas.jpg">
+						<span class="card-title red darken-4">Bebidas</span>
+				</div>
+				<div class="card-content">
+
+					<h4 class="red-text text-darken-4">Bebidas Alcoholicas</h4><!--Lista para seleccionar las bebidas alcoholicas-->
+						<!-- Input tipo checkbox para seleccionar la comida deseada -->
+					    <p>
+					    	<!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+					      <input type="checkbox" id="cerveza" value='{"descripcion":"Cerveza","precio":60}'/>
+					      <label for="cerveza">Cerveza $60</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="margarita" value='{"descripcion":"Margarita","precio":70}' />
+					      <label for="margarita">Margarita $70</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="mojitos" value='{"descripcion":"Mojitos","precio":88}' />
+					      <label for="mojitos">Mojitos $88</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="vinoTinto" value='{"descripcion":"Vino Tinto","precio":100}'/>
+					      <label for="vinoTinto">Vino Tinto $100</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="piñaColada" value='{"descripcion":"Piña Colada","precio":55}'/>
+					      <label for="piñaColada">Piña Colada $55</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="vodkaSabores" value='{"descripcion":"Vodka sabores","precio":90}'/>
+					      <label for="vodkaSabores">Vodka sabores $90</label>
+					    </p>
+
+					<h4 class="red-text text-darken-4">Bebidas calientes</h4><!--Lista de las opciones de bebidas calientes-->
+					    <p>
+					      <input type="checkbox" id="cafeAmericano" value='{"descripcion":"Cafe Americano","precio":50}' />
+					      <label for="cafeAmericano">Cafe Americano $50</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="expresso" value='{"descripcion":"Expresso","precio":50}' />
+					      <label for="expresso">Expresso $50</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="chocolate" value='{"descripcion":"Chocolate","precio":43}'/>
+					      <label for="chocolate">Chocolate $43</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="teOrganico" value='{"descripcion":"Té Orgánico","precio":50}'/>
+					      <label for="teOrganico">Té Orgánico $50</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="capuccino" value='{"descripcion":"Capuccino","precio":49}'/>
+					      <label for="capuccino">Capuccino $49</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="tizana" value='{"descripcion":"Tizana","precio":45}' />
+					      <label for="tizana">Tizana $45</label>
+					    </p>
+
+					<h4 class="red-text text-darken-4">Bebidas Frías</h4><!--Lista de las opciones de bebidas frias-->
+					    <p>
+					      <input type="checkbox" id="teFrutos" value='{"descripcion":"Té de Frutos","precio":50}' />
+					      <label for="teFrutos">Té de Frutos $50</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="aguasSabor" value='{"descripcion":"Aguas de Sabor","precio":40}'/>
+					      <label for="aguasSabor">Aguas de Sabor $40</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="refresco" value='{"descripcion":"Refresco","precio":40}'/>
+					      <label for="refresco">Refresco $40</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="smoothie" value='{"descripcion":"Smoothie","precio":60}'/>
+					      <label for="smoothie">Smoothie $60</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="frapuccino" value='{"descripcion":"Frapuccino","precio":70}' />
+					      <label for="frapuccino">Frapuccino $70</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="jugosNaturales" value='{"descripcion":"Jugos Naturales","precio":39}'/>
+					      <label for="jugosNaturales">Jugos Naturales $39</label>
+					    </p>
+				</div>
+			</div>
+		</div>
+		<a class="waves-effect waves-light btn red" onClick="checarElementos()" href="#modal1" id="bot">Ordenar</a>
+		<div id="orden">
+	      <table>
+	        <thead>
+	          <tr>
+	              <th class="red-text text-darken-4">Comida</th>
+	              <th class="red-text text-darken-4">Precio</th>
+	          </tr>
+	        </thead>
+	        <tbody id="tabla">
+
+	        </tbody>
+      		</table>
+		</div>
+	</div>
+	</form>
+
+
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+
+</body>
+</html>

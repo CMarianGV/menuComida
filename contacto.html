@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Slab:400,600,700" rel="stylesheet">
+    <title>Portada</title>
+</head>
+
+<body class="portada">
+    <div class=miContainer>
+ <ul id="menuDesayuno" class="dropdown-content">
+    <li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+    <li class="divider"></li>
+    <li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+    <li class="divider"></li>
+    <li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+  </ul>
+  <ul id="menuDesayunoMovil" class="dropdown-content">
+    <li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+    <li class="divider"></li>
+    <li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+    <li class="divider"></li>
+    <li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+  </ul>
+
+  <ul id="menuComida" class="dropdown-content">
+    <li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+    <li class="divider"></li>
+    <li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+    <li class="divider"></li>
+    <li><a href="./comida/comidaPostre.html">Postre</a></li>
+  </ul>
+  <ul id="menuComidaMovil" class="dropdown-content">
+    <li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+    <li class="divider"></li>
+    <li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+    <li class="divider"></li>
+    <li><a href="./comida/comidaPostre.html">Postre</a></li>
+  </ul>
+
+  <ul id="menuCena" class="dropdown-content">
+    <li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+    <li class="divider"></li>
+    <li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+    <li class="divider"></li>
+    <li><a href="./cena/cenaPostre.html">Postre</a></li>
+  </ul>
+  <ul id="menuCenaMovil" class="dropdown-content">
+    <li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+    <li class="divider"></li>
+    <li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+    <li class="divider"></li>
+    <li><a href="./cena/cenaPostre.html">Postre</a></li>
+  </ul>
+
+  <ul id="menuBebidas" class="dropdown-content">
+    <li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+    <li class="divider"></li>
+    <li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+    <li class="divider"></li>
+    <li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+  </ul>
+  <ul id="menuBebidasMovil" class="dropdown-content">
+    <li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+    <li class="divider"></li>
+    <li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+    <li class="divider"></li>
+    <li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+  </ul>
+
+  <!--Barra de navegación del restaurante, se podra mover a la sección que se desee
+     realizado mediente una lista que mandan a llamar a las id's de cada lista de los menus
+     mediante el data-activates-->
+  <nav class="red darken-3"><!--Etiqueta para la barra de la vegación la clase ayuda al diseño-->
+    <div class="nav-wrapper "><!--clases que nos ayudan en el diseño-->
+    <!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
+        principal de la aplicación-->
+      <a href="index.html" class="brand-logo hide-on-small-only"> Gondola Restaurant </a>
+      <a href="index.html" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">Gondola Restaurant</i></a>
+      <div class="row">
+        <!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
+        <ul class="right hide-on-med-and-down">
+
+        <li><a class="dropdown-button" data-activates="menuDesayuno">Desayunos</a></li>
+        <li><a class="dropdown-button" data-activates="menuComida">Comidas</a></li>
+        <li><a class="dropdown-button" data-activates="menuCena">Cenas</a></li>
+        <li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
+        <li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+        <li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+        <li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a class="dropdown-button" data-activates="menuDesayunoMovil">Desayunos</a></li>
+            <li><a class="dropdown-button" data-activates="menuComidaMovil" >Comidas</a></li>
+            <li><a class="dropdown-button" data-activates="menuCenaMovil ">Cenas</a></li>
+            <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
+            <li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+        <li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+        <li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+      <div class="row">
+        <div class="teal darken-4 col l12 m12 s12" id="h1">
+          <div class="row hide-on-med-and-down">
+            <div class="col l3 m3">
+              <img src="../images/Portada/SEP_LOGO.png" class="responsive-img">
+            </div>
+              <div class="col l7 m7">
+                <div class="col l12 m12">
+                  <h3 class="grey-text text-lighten-2 center" id="t">TECNOLÓGICO NACIONAL DE MÉXICO </h4>
+                </div>
+                <div class="col l12 m12">
+                  <h4 class="grey-text text-lighten-2 center" id="t">INSTITUTO TECNOLÓGICO DE CUAUTLA</h6>
+                </div>
+              </div>
+              <div class="col l2 m2">
+                <img src="../images/Portada/ITC_LOGO1.png" class="responsive-img">
+             </div>
+          </div>
+            <div class="row hide-on-large-only">
+            <div class="col s8">
+              <h6 class="grey-text text-lighten-2 center" id="t">TECNM</h6>
+              <h6 class="grey-text text-lighten-2 center" id="t">ITC</h6>
+            </div>
+            <div class="col s4">
+              <img src="../images/Portada/ITC_LOGO1.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m7 l6">
+          <div class="card green darken-3">
+            <div class="card-image">
+              <img src="../images/Portada/fondo.jpg">
+              <h1 class="card-title white-text" id="t">ALUMNOS QUE PRESENTAN:</h1>
+            </div>
+            <div class="card-content">
+              <ul class="collection z-depth-5">
+                <li class="collection-item avatar">
+                  <i class="material-icons circle blue ">alumno</i>
+                  <span class="title" id="t">García Vázquez Cruz Marian</span>
+                  <p id="t">NC: 13680181 </p>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle blue ">alumno</i>
+                  <span class="title" id="t">Hernandez Barco Yosahandy</span>
+                  <p id="t">NC: 13681806</p>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle blue ">alumno</i>
+                  <span class="title" id="t">Reyes Cazares Rodrigo</span>
+                  <p id="t">NC: 13680240</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m7 l6">
+          <div class="card green darken-3">
+            <div class="card-image">
+              <img src="../images/Portada/fondo.jpg">
+              <h1 class="card-title white-text" id="t">INFORMACIÓN DE LA MATERIA:</h1>
+            </div>
+            <div class="card-content">
+              <ul class="collection z-depth-5">
+                <li class="collection-item avatar">
+                  <i class="material-icons circle blue ">materia</i>
+                  <span class="title" id="t">Nombre de la Materia:</span>
+                  <p id="t"> Diseño y desarrollo de páginas web</p>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle blue ">materia</i>
+                  <span class="title" id="t">Profesor: </span>
+                  <p id="t">Armando Rodriguez Jimenez </p>
+                </li>
+                <li class="collection-item avatar">
+                  <i class="material-icons circle blue ">materia</i>
+                  <span class="title" id="t">Grupo: 1</span>
+                  <p id="t">Turno: Matutino Octavo semestre</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    	<script type="text/javascript" src="../js/materialize.min.js"></script>
+    	<script type="text/javascript" src="../js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Slab:400,600,700" rel="stylesheet">
+	<title>Comida Postre</title>
+</head>
+
+<body>
+	<div class=miContainer>
+	<ul id="menuDesayuno" class="dropdown-content">
+	  <li><a href="../desayuno/desayunoEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../desayuno/desayunoPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuDesayunoMovil" class="dropdown-content">
+	  <li><a href="../desayuno/desayunoEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../desayuno/desayunoPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuComida" class="dropdown-content">
+	  <li><a href="./comidaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comidaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comidaPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuComidaMovil" class="dropdown-content">
+	  <li><a href="./comidaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comidaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comidaPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuCena" class="dropdown-content">
+	  <li><a href="../cena/cenaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../cena/cenaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../cena/cenaPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuCenaMovil" class="dropdown-content">
+	  <li><a href="../cena/cenaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../cena/cenaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../cena/cenaPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuBebidas" class="dropdown-content">
+	  <li><a href="../bebida/bebidaFria.html">Bebidas frias</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+	</ul>
+	<ul id="menuBebidasMovil" class="dropdown-content">
+	  <li><a href="../bebida/bebidaFria.html">Bebidas frias</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+	  <li class="divider"></li>
+	  <li><a href="../bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+	</ul>
+
+	<!--Barra de navegación del restaurante, se podra mover a la sección que se desee
+	   realizado mediente una lista que mandan a llamar a las id's de cada lista de los menus
+	   mediante el data-activates-->
+	<nav class="red darken-3"><!--Etiqueta para la barra de la vegación la clase ayuda al diseño-->
+	  <div class="nav-wrapper "><!--clases que nos ayudan en el diseño-->
+	  <!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
+				principal de la aplicación-->
+	    <a href="../index.html" class="brand-logo hide-on-small-only"> Gondola Restaurant </a>
+	    <a href="../index.html" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">Gondola Restaurant</i></a>
+	    <div class="row">
+	    	<!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
+	    	<ul class="right hide-on-med-and-down">
+
+				<li><a class="dropdown-button" data-activates="menuDesayuno">Desayunos</a></li>
+				<li><a class="dropdown-button" data-activates="menuComida">Comidas</a></li>
+				<li><a class="dropdown-button" data-activates="menuCena">Cenas</a></li>
+				<li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
+				<li><a class="dropdown-button" href="../pedido.html">Arma tu menú</a></li>
+				<li><a class="dropdown-button" href="../contacto.html">Contacto</a></li>
+				<li><a class="dropdown-button" href="../reporte.html">Informacion</a></li>
+
+	    	</ul>
+	    	<ul class="side-nav" id="mobile-demo">
+		        <li><a class="dropdown-button" data-activates="menuDesayunoMovil">Desayunos</a></li>
+		        <li><a class="dropdown-button" data-activates="menuComidaMovil" >Comidas</a></li>
+		        <li><a class="dropdown-button" data-activates="menuCenaMovil" >Cenas</a></li>
+		        <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
+		        <li><a class="dropdown-button" href="../pedido.html">Arma tu menú</a></li>
+				<li><a class="dropdown-button" href="../contacto.html">Contacto</a></li>
+				<li><a class="dropdown-button" href="../reporte.html">Informacion</a></li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+		<div class="carta">
+	<h1 class="white-text center">Postres de la comida</h1>
+			<div class="columna">
+
+				<div class="card">
+					<div class="card-image">
+						<img src="../../images/comida/PostreComida/malteadas.jpg" class="responsive-img">
+						<span class="card-title red darken-4">Malteada</span>
+						<a class="btn-floating halfway-fab waves-effect waves-light red center">$85</a>
+					</div>
+					<div class="card-content">
+						<p id="letra">Delicioso postre con crema batida en sus tradicionales sabores.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="../../images/comida/PostreComida/smoothie.png" class="responsive-img">
+						<span class="card-title red darken-4">Smoothie</span>
+						<a class="btn-floating halfway-fab waves-effect waves-light red center">$80</a>
+					</div>
+					<div class="card-content">
+						<p id="letra">Lo mejor de poder disfrutar tu fruta favorita en una refrescante bebida.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="../../images/comida/PostreComida/helado.jpg" class="responsive-img">
+						<span class="card-title red darken-4">Helado</span>
+						<a class="btn-floating halfway-fab waves-effect waves-light red center">$50</a>
+					</div>
+					<div class="card-content">
+						<p id="letra">Ven y disfruta de más de 120 sabores unicos y divertidos que te van a gustar.</p>
+					</div>
+				</div>
+			</div>
+			<div class="columna">
+				<div class="card">
+					<div class="card-image">
+						<img src="../../images/comida/PostreComida/banana.jpg" class="responsive-img">
+						<span class="card-title red darken-4">Banana Split</span>
+						<a class="btn-floating halfway-fab waves-effect waves-light red center">$95</a>
+					</div>
+					<div class="card-content">
+						<p id="letra">Disfruta un rico postre que lleva plátano y bolas de helado de vainilla, chocolate y fresa.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="../../images/comida/PostreComida/te.jpg" class="responsive-img">
+						<span class="card-title red darken-4">Té frío</span>
+						<a class="btn-floating halfway-fab waves-effect waves-light red center">$80</a>
+					</div>
+					<div class="card-content">
+						<p id="letra">Delicioso Té frío de diferentes sabores, para disfrutar en una tarde de calor.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-image">
+						<img src="../../images/comida/PostreComida/raspado.jpg" class="responsive-img">
+						<span class="card-title red darken-4">Raspado de Sabores</span>
+						<a class="btn-floating halfway-fab waves-effect waves-light red center">$60</a>
+					</div>
+					<div class="card-content">
+						<p id="letra">Ricos raspados de sabores para disfrutar en compañia de tus seres queridos.</p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../../js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../../js/materialize.min.js"></script>
+	<script type="text/javascript" src="../../js/app.js"></script>
+
+</body>
+
+</html>

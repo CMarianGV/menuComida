@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Slab:400,600,700" rel="stylesheet">
+	<title>Gondola</title>
+</head>
+
+<!--DESCRIPCIÓN DEL PROYECTO-->
+<!--Aplicación web que muestra un catalógo de un menú de un restaurante ofreciendo las tres
+comidas del día con su respectiva entrada, plato fuerte, postre y bebida, en la sección de
+"ARMA TU MENÚ" podras seleccionar todo lo que quieras ordenar y hara una confirmación de la orden-->
+<body>
+	<div class=miContainer>
+	<!--Listas para la barra de navegación, se diseña una lista por cada Menú del día
+	   el cual te va a redirigir a cada página donde se mostrara el catalogo-->
+
+	<ul id="menuDesayuno" class="dropdown-content">
+	  <li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuDesayunoMovil" class="dropdown-content">
+	  <li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuComida" class="dropdown-content">
+	  <li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuComidaMovil" class="dropdown-content">
+	  <li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./comida/comidaPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuCena" class="dropdown-content">
+	  <li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaPostre.html">Postre</a></li>
+	</ul>
+	<ul id="menuCenaMovil" class="dropdown-content">
+	  <li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./cena/cenaPostre.html">Postre</a></li>
+	</ul>
+
+	<ul id="menuBebidas" class="dropdown-content">
+	  <li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+	</ul>
+	<ul id="menuBebidasMovil" class="dropdown-content">
+	  <li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+	  <li class="divider"></li>
+	  <li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+	</ul>
+
+	<!--Barra de navegación del restaurante, se podra mover a la sección que se desee
+	   realizado mediente una lista que mandan a llamar a las id's de cada lista de los menus
+	   mediante el data-activates-->
+	<nav class="red darken-3"><!--Etiqueta para la barra de la vegación la clase ayuda al diseño-->
+	  <div class="nav-wrapper "><!--clases que nos ayudan en el diseño-->
+	  <!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
+				principal de la aplicación-->
+	    <a href="index.html" class="brand-logo hide-on-small-only"> Gondola Restaurant </a>
+	    <a href="index.html" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">Gondola Restaurant</i></a>
+	    <div class="row">
+	    	<!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
+	    	<ul class="right hide-on-med-and-down">
+
+				<li><a class="dropdown-button" data-activates="menuDesayuno">Desayunos</a></li>
+				<li><a class="dropdown-button" data-activates="menuComida">Comidas</a></li>
+				<li><a class="dropdown-button" data-activates="menuCena">Cenas</a></li>
+				<li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
+				<li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+				<li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+
+	    	</ul>
+	    	<ul class="side-nav" id="mobile-demo">
+		        <li><a class="dropdown-button" data-activates="menuDesayunoMovil">Desayunos</a></li>
+		        <li><a class="dropdown-button" data-activates="menuComidaMovil" >Comidas</a></li>
+		        <li><a class="dropdown-button" data-activates="menuCenaMovil" >Cenas</a></li>
+		        <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
+		        <li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+				<li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+		    </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<h1 class="white-text">Menu del día</h1>
+	<!--Sección del carrosuel donde se muestra el slogan del restaurante y el menú del día-->
+	<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-item deep-orange  darken-3 white-text img4" href="#one!">
+		<h1 id="logo" >Gondola Restaurant</h1>
+		<h3 class="white-text">El lugar ideal para disfrutar de la compañia de tus seres queridos</h3>
+    </div>
+    <div class="carousel-item deep-orange  darken-3 white-text  img1"  href="#two!">
+				<h1 id="trans">Desayuno por solo $120</h1>
+    </div>
+    <div class="carousel-item deep-orange  darken-2 white-text img2 " href="#three!">
+      <h1 id="trans">Comida por solo $180</h1>
+    </div>
+    <div class="carousel-item deep-orange  darken-1 white-text img3 " href="#four!">
+      <h1 id="trans">Cena por solo $150</h1>
+    </div>
+  </div>
+</div>
+
+<!--Sección de los archivos javascript-->
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+
+</body>
+</html>

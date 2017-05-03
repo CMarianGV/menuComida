@@ -1,0 +1,662 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Slab:400,600,700" rel="stylesheet">
+    <title>Reporte</title>
+</head>
+
+<body class="portada">
+    <div class=miContainer>
+      <!-----------------------------Menú del restaurante--------------------------->
+      <ul id="menuDesayuno" class="dropdown-content">
+  			<li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+  		</ul>
+
+  		<ul id="menuComida" class="dropdown-content">
+  			<li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./comida/comidaPostre.html">Postre</a></li>
+  		</ul>
+
+  		<ul id="menuCena" class="dropdown-content">
+  			<li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./cena/cenaPostre.html">Postre</a></li>
+  		</ul>
+
+  		<ul id="menuBebidas" class="dropdown-content">
+  			<li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+  		</ul>
+
+      <nav class="teal">
+        <div class="nav-wrapper ">
+          <a href="index.html" class="brand-logo"> Gondola Restaurant </a>
+          <div class="row">
+            <ul class="right hide-on-med-and-down">
+              <li><a class="dropdown-button" data-activates="menuDesayuno">Desayunos</a></li>
+              <li><a class="dropdown-button" data-activates="menuComida">Comidas</a></li>
+              <li><a class="dropdown-button" data-activates="menuCena">Cenas</a></li>
+              <li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
+              <li><a class="dropdown-button" href="./pedido.html">Arma tu menú</a></li>
+              <li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+              <li><a class="dropdown-button" href="./reporte.html">Informacion</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!---------------------Portada del tecnológico--------------------------------------->
+      <div class="row">
+        <div class="teal darken-4 col l12 m12 s12" id="h1">
+          <div class="row hide-on-med-and-down">
+            <div class="col l3 m3">
+              <img src="../images/Portada/SEP_LOGO.png" class="responsive-img">
+            </div>
+              <div class="col l7 m7">
+                <div class="col l12 m12">
+                  <h3 class="grey-text text-lighten-2 center" id="t">TECNOLÓGICO NACIONAL DE MÉXICO </h4>
+                </div>
+                <div class="col l12 m12">
+                  <h4 class="grey-text text-lighten-2 center" id="t">INSTITUTO TECNOLÓGICO DE CUAUTLA</h6>
+                </div>
+              </div>
+              <div class="col l2 m2">
+                <img src="../images/Portada/ITC_LOGO1.png" class="responsive-img">
+             </div>
+          </div>
+            <div class="row hide-on-large-only">
+            <div class="col s8">
+              <h6 class="grey-text text-lighten-2 center" id="t">TECNM</h6>
+              <h6 class="grey-text text-lighten-2 center" id="t">ITC</h6>
+            </div>
+            <div class="col s4">
+              <img src="../images/Portada/ITC_LOGO1.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------Inicio del Reporte--------------------------------->
+      <div class="row" id="trans">
+        <h3 class="white-text center">Sección del Index</h3>
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Visual</h3>
+          <img src="../images/reporte/index.png" class="responsive-img">
+        </div>
+
+        <div class="col l6 m12 s12" >
+          <h3 class="center white-text">Código</h3>
+          <pre class="language-markup">
+  &lt!--DESCRIPCIÓN DEL PROYECTO-->
+  &lt!--Aplicación web que muestra un catalógo de un menú de un restaurante ofreciendo las tres
+  comidas del día con su respectiva entrada, plato fuerte, postre y bebida, en la sección de
+  "ARMA TU MENÚ" podras seleccionar todo lo que quieras ordenar y hara una confirmación de la orden-->
+
+  &ltbody>
+    &ltdiv class=miContainer>
+    &lt!--Listas para la barra de navegación, se diseña una lista por cada Menú del día
+    el cual te va a redirigir a cada página donde se mostrara el catalogo-->
+
+    &lt!--Lista del desayuno-->
+    &ltul id="menuDesayuno" class="dropdown-content">
+      &ltli>&lta href="./desayuno/desayunoEntrada.html">Entrada&lt/a>&lt/li&gt
+      &ltli class="divider">&lt/li>
+      &ltli>&lta href="./desayuno/desayunoFuerte.html">Plato fuerte&lt/a>&lt/li&gt
+      &ltli class="divider">&lt/li>
+      &ltli>&lta href="./desayuno/desayunoPostre.html">Postre&lt/a>&lt/li&gt
+    &lt/ul>
+
+    &lt!--Lista de la comida-->
+    &ltul id="menuComida" class="dropdown-content">
+    	&ltli>&lta href="./comida/comidaEntrada.html">Entrada&lt/a>&lt/li&gt
+    	&ltli class="divider">&lt/li&gt
+    	&ltli>&lta href="./comida/comidaFuerte.html">Plato fuerte&lt/a>&lt/li&gt
+    	&ltli class="divider">&lt/li&gt
+    	&ltli>&lta href="./comida/comidaPostre.html">Postre&lt/a>&lt/li&gt
+    &lt/ul&gt
+
+    &lt!--Lista de la cena-->
+		&ltul id="menuCena" class="dropdown-content">
+			&ltli>&lta href="./cena/cenaEntrada.html">Entrada&lt/a>&lt/li>
+			&ltli class="divider">&lt/li>
+			&ltli>&lta href="./cena/cenaFuerte.html">Plato fuerte&lt/a>&lt/li>
+			&ltli class="divider">&lt/li>
+			&ltli>&lta href="./cena/cenaPostre.html">Postre&lt/a>&lt/li>
+		&lt/ul>
+
+		&lt!--Lista de las bebidas-->
+		&ltul id="menuBebidas" class="dropdown-content">
+			&ltli>&lta href="./bebida/bebidaFria.html">Bebidas frias&lt/a>&lt/li>
+			&ltli class="divider">&lt/li>
+			&ltli>&lta href="./bebida/bebidaCaliente.html">Bebidas calientes&lt/a>&lt/li>
+			&ltli class="divider">&lt/li>
+			&ltli>&lta href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas&lt/a>&lt/li>
+		&lt/ul>
+
+    &lt!--Barra de navegación del restaurante, se podra mover a la sección que se desee
+	   realizado mediente una lista que mandan a llamar a las id's de cada lista de los menus
+	   mediante el data-activates-->
+		&ltnav class="red darken-3">&lt!--Etiqueta para la barra de la vegación la clase ayuda al diseño-->
+			&ltdiv class="nav-wrapper ">&lt!--clases que nos ayudan en el diseño-->
+				&lt!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
+				principal de la aplicación-->
+				&lta href="index.html" class="brand-logo"> Gondola Restaurant &lt/a>
+				&ltdiv class="row">
+					&lt!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño
+					responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet
+				  o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
+					&ltul class="right hide-on-med-and-down">
+						&ltli>&lta class="dropdown-button" data-activates="menuDesayuno">Desayunos&lt/a>&lt/li>
+						&ltli>&lta class="dropdown-button" data-activates="menuComida">Comidas&lt/a>&lt/li>
+						&ltli>&lta class="dropdown-button" data-activates="menuCena">Cenas&lt/a>&lt/li>
+						&ltli>&lta class="dropdown-button" data-activates="menuBebidas">Bebidas&lt/a>&lt/li>
+						&ltli>&lta class="dropdown-button" href="./pedido.html">Arma tu menú&lt/a>&lt/li>
+						&ltli>&lta class="dropdown-button" href="./contacto.html">Contacto&lt/a>&lt/li>
+						&ltli>&lta class="dropdown-button" href="./reporte.html">Informacion&lt/a>&lt/li>
+					&lt/ul>
+				&lt/div>
+			&lt/div>
+		&lt/nav>
+
+		&lth1 class="white-text">Menu del día&lt/h1>
+    &lt!--Sección del carrosuel donde se muestra el slogan del restaurante y el menú del día-->
+		&ltdiv class="carousel carousel-slider center" data-indicators="true">
+			&ltdiv class="carousel-item deep-orange  darken-3 white-text img4" href="#one!">
+				&lth1 id="logo">Gondola Restaurant&lt/h1>
+				&lth3 class="white-text">El lugar ideal para disfrutar de la compañia de tus seres queridos&lt/h3>
+			&lt/div>
+			&ltdiv class="carousel-item deep-orange  darken-3 white-text  img1" href="#two!">
+				&lth1 id="trans">Desayuno por solo $120&lt/h1>
+			&lt/div>
+			&ltdiv class="carousel-item deep-orange  darken-2 white-text img2 " href="#three!">
+				&lth1 id="trans">Comida por solo $180&lt/h1>
+			&lt/div>
+			&ltdiv class="carousel-item deep-orange  darken-1 white-text img3 " href="#four!">
+				&lth1 id="trans">Cena por solo $150&lt/h1>
+			&lt/div>
+		&lt/div>
+	&lt/div>
+          </pre>
+        </div>
+
+        <h3 class="white-text center" >Sección de Arma tu menú html</h3>
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Visual</h3>
+          <img src="../images/reporte/menu1.png" class="responsive-img">
+        </div>
+
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Código</h3>
+          <pre class="language-markup">
+  &lt!--En esta sección, es en la cual los comensales, despues de revisar el menú, podran elegir sus alimentos
+  de acuerdo a lo que ellos selecciones y podran confirmar su pedido-->
+  &lt!--Primero se hace un formulario que va a contener todas las cartas con cada uno de los alimentos del
+  dia con sus respectivos tiempos (entrada, comida, postre)-->
+  &ltform id="frmCarta">
+  	&ltdiv class="carta">
+  		&ltdiv class="columna">
+  			&ltdiv class="card">
+  		    &ltdiv class="card-image">
+  					&ltimg src="../images/desayuno/desayuno.png" class="responsive-img">
+  						&ltspan class="card-title red darken-4">Desayunos&lt/span> &lt!--esta es la carta de los desayunos-->
+  				&lt/div>
+     			&ltdiv class="card-content">
+
+  					&lth4 class="red-text text-darken-4">Entradas&lt/h4> &lt!--Lista de enetradas del desayuno-->
+  					&lt!--Cada lista que se puede visualizar, esta realizada con un input del tipo checkbox y un label
+  					que nos permite visualizar el nombre del platillo-->
+  					&lt!-- Input tipo checkbox para seleccionar la comida deseada -->
+  			    &ltp>
+  			    	&lt!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+  			      &ltinput type="checkbox" id="brioche" value='{"descripcion":"Brioche de Manzana","precio":25}'/>
+  			      &ltlabel for="brioche">Brioche de Manzana $25&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="concha" value='{"descripcion":"Concha Integral","precio":20}' />
+  			      &ltlabel for="concha">Concha Integral $20&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  					&lt!--La propiedad Value en el input manda dos variables con sus respectivos
+  					valores (descripcion y precio) que seran utilizados en el archivo app.js-->
+  			      &ltinput type="checkbox" id="cuernito" value='{"descripcion":"Cuernito","precio":22}'/>
+  			      &ltlabel for="cuernito">Cuernito $22&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="dona1" value='{"descripcion":"Dona Glaseada 1","precio":25}'/>
+  			      &ltlabel for="dona1">Dona Glaseada 1 $25&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="dona2" value='{"descripcion":"Dona glaseada 2","precio":20}'/>
+  			      &ltlabel for="dona2">Dona glaseada 2 $20&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="muffin" value='{"descripcion":"Muffin","precio":23}'/>
+  			      &ltlabel for="muffin">Muffin $23&lt/label>
+  			    &lt/p>
+
+  		    &lth4 class="red-text text-darken-4">Platos fuertes&lt/h4>&lt!--Lista de los platos fuertes del desayuno-->
+  			    &ltp>
+  			      &ltinput type="checkbox" id="chilaquiles" value='{"descripcion":"Chilaquiles","precio":90}' />
+  			      &ltlabel for="chilaquiles">Chilaquiles $90&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="campesino" value='{"descripcion":"Desayuno Campesino","precio":100}' />
+  			      &ltlabel for="campesino">Desayuno Campesino $100&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="huevos" value='{"descripcion":"Huevos Combinados","precio":90}'/>
+  			      &ltlabel for="huevos">Huevos Combinados $90&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="panini" value='{"descripcion":"Panini","precio":120}'/>
+  			      &ltlabel for="panini">Panini $120&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="club" value='{"descripcion":"Club sandwich","precio":99}'/>
+  			      &ltlabel for="club">Club sandwich $99&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="vegetariano" value='{"descripcion":"Sandwich vegetariano","precio":110}' />
+  			      &ltlabel for="vegetariano">Sandwich Vegetariano $110&lt/label>
+  			    &lt/p>
+
+  		    &lth4 class="red-text text-darken-4">Postres&lt/h4>&lt!--Lista de los postres del desayuno-->
+  			    &ltp>
+  			      &ltinput type="checkbox" id="cheesecake" value='{"descripcion":"Cheesecake de durazno","precio":90}' />
+  			      <
+              &ltlabel for="cheesecake">Cheesecake de durazno $90&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="pastel" value='{"descripcion":"Pastel de Chocolate","precio":100}'/>
+  			      &ltlabel for="pastel">Pastel de Chocolate $100&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="frutas1" value='{"descripcion":"Coctel de frutas 1","precio":70}'/>
+  			      &ltlabel for="frutas1">Coctel de frutas 1 $70&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="frutas2" value='{"descripcion":"Coctel de frutas 2","precio":90}'/>
+  			      &ltlabel for="frutas2">Coctel de frutas 2 $90&lt/label>
+  			    &lt/p>
+  			    &ltp>
+  			      &ltinput type="checkbox" id="hotCakes" value='{"descripcion":"Hot Cakes","precio":70}' />
+  			      &ltlabel for="hotCakes">Hot Cakes $70&lt/label>
+  			    &lt/p>
+  			    &ltp>
+				      &ltinput type="checkbox" id="tarta" value='{"descripcion":"Tarta de fresa","precio":80}'/>
+				      &ltlabel for="tarta">Tarta de fresa $80&lt/label>
+				    &lt/p>
+
+			&lt/div>
+		&lt/div>
+		&lt!--Esta es la segunda carta donde se pueden seleccionar las comidas de igual forma se muestran las tres enttradas-->
+		&ltdiv class="card">
+	    &ltdiv class="card-image">
+				&ltimg src="../images/comida/comida.jpg">
+				&ltspan class="card-title red darken-4">Comidas&lt/span>
+			&lt/div>
+			&ltdiv class="card-content">
+
+				&lth4 class="red-text text-darken-4">Entradas&lt/h4>&lt!--Lista de las entradas de la comida-->
+					&lt!-- Input tipo checkbox para seleccionar la comida deseada -->
+			    &ltp>
+			    	&lt!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+			      &ltinput type="checkbox" id="caldo" value='{"descripcion":"Caldo Tlalpeño","precio":100}'/>
+			      &ltlabel for="caldo">Caldo Tlalpeño $100&lt/label>
+			    &lt/p>
+			    &ltp>
+  		      &ltinput type="checkbox" id="ensaladaMexicana" value='{"descripcion":"Ensalada Mexicana","precio":100}' />
+  		      &ltlabel for="ensaladaMexicana">Ensalada Mexicana $100&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="ensaladaChef" value='{"descripcion":"Ensalada del chef","precio":90}' />
+  		      &ltlabel for="ensaladaChef">Ensalada del chef $90&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="sopaTortilla" value='{"descripcion":"Sopa de tortilla","precio":70}'/>
+  		      &ltlabel for="sopaTortilla">Sopa de tortilla $70&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="sopaHuerta" value='{"descripcion":"Sopa de la huerta","precio":100}'/>
+  		      &ltlabel for="sopaHuerta">Sopa de la huerta $100&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="sopaEspecial" value='{"descripcion":"Sopa Especial","precio":100}'/>
+     	      &ltlabel for="sopaEspecial">Sopa Especial $100&lt/label>
+    	    &lt/p>
+
+        &lth4 class="red-text text-darken-4">Platos fuertes&lt/h4>&lt!--Lista de los platos fuertes de la comida-->
+          &ltp>
+            &ltinput type="checkbox" id="camarones" value='{"descripcion":"Camarones Empanizados","precio":130}' />
+            &ltlabel for="camarones">Camarones Empanizados $130&lt/label>
+          &lt/p>
+          &ltp>
+            &ltinput type="checkbox" id="cecina" value='{"descripcion":"Cecina","precio":120}' />
+            &ltlabel for="cecina">Cecina $120&lt/label>
+          &lt/p>
+          &ltp>
+            &ltinput type="checkbox" id="enchiladas" value='{"descripcion":"Enchiladas Suizas","precio":99}'/>
+            &ltlabel for="enchi">Enchiladas Suizas $99&lt/label>
+          &lt/p>
+          &ltp>
+  		      &ltinput type="checkbox" id="filetePescado" value='{"descripcion":"Filete de pescado","precio":135}'/>
+  		      &ltlabel for="filetePescado">Filete de pescado $135&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="milanesa" value='{"descripcion":"Milanesa de pollo","precio":100}'/>
+  		      &ltlabel for="milanesa">Milanesa de pollo $100&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="tacos" value='{"descripcion":"Tacos de arrachera","precio":120}' />
+    	      &ltlabel for="tacos">Tacos de arrachera $120&lt/label>
+    	    &lt/p>
+
+        &lth4 class="red-text text-darken-4">Postres&lt/h4>&lt!--Lista de los postres de la comida-->
+    	    &ltp>
+    	      &ltinput type="checkbox" id="malteada" value='{"descripcion":"Malteada","precio":85}' />
+    	      &ltlabel for="malteada">Malteada $85&lt/label>
+    	    &lt/p>
+    	    &ltp>
+    	      &ltinput type="checkbox" id="smoothie" value='{"descripcion":"Smoothie","precio":80}'/>
+    	      &ltlabel for="smoothie">Smoothie $80&lt/label>
+    	    &lt/p>
+    	    &ltp>
+    	      &ltinput type="checkbox" id="helado" value='{"descripcion":"Helado","precio":50}'/>
+    	      &ltlabel for="helado">Helado $50&lt/label>
+    	    &lt/p>
+    	    &ltp>
+    	      &ltinput type="checkbox" id="banana" value='{"descripcion":"Banana Split","precio":95}'/>
+    	      &ltlabel for="banana">Banana Split $95&lt/label>
+    	    &lt/p>
+    	    &ltp>
+    	      &ltinput type="checkbox" id="teFrio" value='{"descripcion":"Té frío","precio":80}' />
+    	      &ltlabel for="teFrio">Té frío $80&lt/label>
+    	    &lt/p>
+    	    &ltp>
+  		      &ltinput type="checkbox" id="raspado" value='{"descripcion":"Raspado de sabores","precio":60}'/>
+  		      &ltlabel for="raspado">Raspado de sabores $60&lt/label>
+  		    &lt/p>
+
+  		&lt/div>
+  	&lt/div>
+  	&lt/div>
+    &lt!--Esta es la carte donde contiene los tres tiempos de la cena-->
+  	&ltdiv class="columna">
+  		&ltdiv class="card">
+  	    &ltdiv class="card-image">
+  				&ltimg src="../images/cena/cena.jpg">
+  				&ltspan class="card-title red darken-4">Cenas&lt/span>
+  			&lt/div>
+  			&ltdiv class="card-content">
+
+  				&lth4 class="red-text text-darken-4">Entradas&lt/h4>&lt!--Lista de las entradas de la cena-->
+  					&lt!-- Input tipo checkbox para seleccionar la comida deseada -->
+  				    &ltp>
+  			    	&lt!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+    			      &ltinput type="checkbox" id="caldoOlla" value='{"descripcion":"Caldo de olla","precio":89}'/>
+    			      &ltlabel for="caldoOlla">Caldo de olla $89&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="consome" value='{"descripcion":"Consomé Ranchero","precio":100}' />
+    			      &ltlabel for="consome">Consomé Ranchero $100&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="ensaladaPollo" value='{"descripcion":"Ensalada de Pollo","precio":90}' />
+    			      &ltlabel for="ensaladaPollo">Ensalada de Pollo $90&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="quesoFundido" value='{"descripcion":"Queso fundido","precio":110}'/>
+    			      &ltlabel for="quesoFundido">Queso fundido $110&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="sopaFideo" value='{"descripcion":"Sopa de fideo","precio":79}'/>
+    			      &ltlabel for="sopaFideo">Sopa de fideo $79&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="sopaHongos" value='{"descripcion":"Sopa de hongos","precio":88}'/>
+    			      &ltlabel for="sopaHongos">Sopa de hongos $88&lt/label>
+  				    &lt/p>
+
+    		    &lth4 class="red-text text-darken-4">Platos fuertes&lt/h4><!--Lista de los platos fuertes de la cena-->
+    			    &ltp>
+  				      &ltinput type="checkbox" id="alitas" value='{"descripcion":"Alitas","precio":110}' />
+  				      &ltlabel for="alitas">Alitas $110&lt/label>
+  				    &lt/p>
+  				    &ltp>
+    			      &ltinput type="checkbox" id="hamburguesa" value='{"descripcion":"Hamburguesa","precio":90}' />
+    			      &ltlabel for="hamburguesa">Hamburguesa $90&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="milanesaHawaiana" value='{"descripcion":"Milanesa Hawaiana","precio":105}'/>
+    			      &ltlabel for="milanesaHawaiana">Milanesa Hawaiana $105&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="molletes" value='{"descripcion":"Molletes","precio":90}'/>
+    			      &ltlabel for="molletes">Molletes $90&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="omelett" value='{"descripcion":"Omelett","precio":100}'/>
+    			      &ltlabel for="omelett">Omelett $100&lt/label>
+    			    &lt/p>
+    			    &ltp>
+    			      &ltinput type="checkbox" id="sandwich" value='{"descripcion":"Sándwich Búfalo","precio":90}' />
+    			      &ltlabel for="sandwich">Sándwich Búfalo $90&lt/label>
+    			    &lt/p>
+
+      	    &lth4 class="red-text text-darken-4">Postres&lt/h4>&lt!--Lista de los postres de la cena-->
+      		    &ltp>
+      		      &ltinput type="checkbox" id="cheesecakeFresa" value='{"descripcion":"Cheesecake de Fresa","precio":80}' />
+      		      &ltlabel for="cheesecakeFresa">Cheesecake de Fresa $80&lt/label>
+      		    &lt/p>
+      		    &ltp>
+      		      &ltinput type="checkbox" id="cheesecakeGuayaba" value='{"descripcion":"Cheesecake de Guayaba","precio":70}'/>
+      		      &ltlabel for="cheesecakeGuayaba">Cheesecake de Guayaba $70&lt/label>
+      		    &lt/p>
+      		    &ltp>
+        	      &ltinput type="checkbox" id="crepaHelado" value='{"descripcion":"Crepa con Helado","precio":85}'/>
+  				      &ltlabel for="crepaHelado">Crepa con Helado $85&lt/label>
+  				    &lt/p>
+  				    &ltp>
+  				      &ltinput type="checkbox" id="crepas" value='{"descripcion":"Crepas","precio":80}'/>
+  				      &ltlabel for="crepas">Crepas $80&lt/label>
+  				    &lt/p>
+  				    &ltp>
+  	  		      &ltinput type="checkbox" id="payLimon" value='{"descripcion":"Pay de limón","precio":75}' />
+    			      &ltlabel for="payLimon">Pay de limón $75&lt/label>
+  				    &lt/p>
+  				    &ltp>
+  				      &ltinput type="checkbox" id="Waffles" value='{"descripcion":"Waffles","precio":85}'/>
+  				      &ltlabel for="Waffles">Waffles $85&lt/label>
+  				    &lt/p>
+  		&lt/div>
+  	&lt/div>
+    &lt!--Carta con las bebidas y sus diferentes opciones Calientes, frias y alcoholicas-->
+  	&ltdiv class="card">
+      &ltdiv class="card-image">
+  			&ltimg src="../images/bebidas.jpg">
+  			&ltspan class="card-title red darken-4">Bebidas&lt/span>
+  		&lt/div>
+  		&ltdiv class="card-content">
+
+    		&lth4 class="red-text text-darken-4">Bebidas Alcoholicas&lt/h4>&lt!--Lista para seleccionar las bebidas alcoholicas-->
+  				&lt!-- Input tipo checkbox para seleccionar la comida deseada -->
+  		    &ltp>
+  		    	&lt!-- En la propiedad value se indica el nombre de la comida y el precio con un formato JSON que despues sera tratado por un script-->
+  		      &ltinput type="checkbox" id="cerveza" value='{"descripcion":"Cerveza","precio":60}'/>
+  		      &ltlabel for="cerveza">Cerveza $60&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="margarita" value='{"descripcion":"Margarita","precio":70}' />
+  		      &ltlabel for="margarita">Margarita $70&lt/label>
+  		    &lt/p>
+  		    &ltp>
+            &ltinput type="checkbox" id="mojitos" value='{"descripcion":"Mojitos","precio":88}' />
+  		      &ltlabel for="mojitos">Mojitos $88&lt/label>
+  		    &lt/p>
+          &ltp>
+  		      &ltinput type="checkbox" id="vinoTinto" value='{"descripcion":"Vino Tinto","precio":100}'/>
+  		      &ltlabel for="vinoTinto">Vino Tinto $100&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="piñaColada" value='{"descripcion":"Piña Colada","precio":55}'/>
+  		      &ltlabel for="piñaColada">Piña Colada $55<&ltlabel>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="vodkaSabores" value='{"descripcion":"Vodka sabores","precio":90}'/>
+  		      &ltlabel for="vodkaSabores">Vodka sabores $90&lt/label>
+  		    &lt/p>
+
+  			&lth4 class="red-text text-darken-4">Bebidas calientes&lt/h4>v!--Lista de las opciones de bebidas calientes-->
+  		    &ltp>
+  		      &ltinput type="checkbox" id="cafeAmericano" value='{"descripcion":"Cafe Americano","precio":50}' />
+  		      &ltlabel for="cafeAmericano">Cafe Americano $50&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="expresso" value='{"descripcion":"Expresso","precio":50}' />
+  		      &ltlabel for="expresso">Expresso $50&lt/label>
+  		    &lt/p>
+  		    &ltp>
+    	      &ltinput type="checkbox" id="chocolate" value='{"descripcion":"Chocolate","precio":43}'/>
+  		      &ltlabel for="chocolate">Chocolate $43&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="teOrganico" value='{"descripcion":"Té Orgánico","precio":50}'/>
+  		      &ltlabel for="teOrganico">Té Orgánico $50&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="capuccino" value='{"descripcion":"Capuccino","precio":49}'/>
+  		      &ltlabel for="capuccino">Capuccino $49&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="tizana" value='{"descripcion":"Tizana","precio":45}' />
+  		      &ltlabel for="tizana">Tizana $45&lt/label>
+  		    &lt/p>
+
+  			&lth4 class="red-text text-darken-4">Bebidas Frías&lt/h4>&lt!--Lista de las opciones de bebidas frias-->
+  		    &ltp>
+  		      &ltinput type="checkbox" id="teFrutos" value='{"descripcion":"Té de Frutos","precio":50}' />
+  		      &ltlabel for="teFrutos">Té de Frutos $50&lt/label>
+  		    &lt/p>
+  		    &ltp>
+  		      &ltinput type="checkbox" id="aguasSabor" value='{"descripcion":"Aguas de Sabor","precio":40}'/>
+    	      &ltlabel for="aguasSabor">Aguas de Sabor $40&lt/label>
+  		    &lt/p>
+    	    &ltp>
+  		      &ltinput type="checkbox" id="refresco" value='{"descripcion":"Refresco","precio":40}'/>
+  		      &ltlabel for="refresco">Refresco $40&lt/label>
+  		    &lt/p>
+  		    &ltp>
+			      &ltinput type="checkbox" id="smoothie" value='{"descripcion":"Smoothie","precio":60}'/>
+			      &ltlabel for="smoothie">Smoothie $60v/label>
+			    &lt/p>
+			    &ltp>
+			      &ltinput type="checkbox" id="frapuccino" value='{"descripcion":"Frapuccino","precio":70}' />
+			      &ltlabel for="frapuccino">Frapuccino $70&lt/label>
+			    &lt/p>
+			    &ltp>
+			      &ltinput type="checkbox" id="jugosNaturales" value='{"descripcion":"Jugos Naturales","precio":39}'/>
+			      &ltlabel for="jugosNaturales">Jugos Naturales $39&lt/label>
+			    &lt/p>
+			&lt/div>
+		&lt/div>
+	&lt/div>
+	&lta class="waves-effect waves-light btn red" onClick="checarElementos()" href="#modal1" id="bot">Ordenar&lt/a>
+	&ltdiv id="orden">
+    &lttable>
+      &ltthead>
+        &lttr>
+          &ltth class="red-text text-darken-4">Comida&lt/th>
+          &ltth class="red-text text-darken-4">Precio&lt/th>
+        &lt/tr>
+      &lt/thead>
+      &lttbody id="tabla">
+
+      &lt/tbody>
+		&lt/table>
+	&lt/div>
+	&lt/div>
+	&lt/form>
+          </pre>
+        </div>
+
+        <h3 class="white-text center" >Sección de Arma tu menú js</h3>
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Visual</h3>
+          <img src="../images/reporte/menu2.png" class="responsive-img">
+        </div>
+
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Código</h3>
+          <pre class="language-markup">
+  // Array con los ids de los checkbox
+  var ids=["brioche","concha","cuernito","dona1","dona2","muffin","chilaquiles","campesino","huevos",
+  "panini","club","vegetariano","cheesecake","pastel","frutas1","frutas2","hotCakes","tarta","caldo",
+  "ensaladaMexicana","ensaladaChef","sopaTortilla","sopaHuerta","sopaEspecial","camarones","cecina",
+  "enchiladas","filetePescado","milanesa","tacos","malteada","smoothie","helado","banana","teFrio",
+  "raspado","caldoOlla","consome","ensaladaPollo","quesoFundido","sopaFideo","sopaHongos","alitas",
+  "hamburguesa","milanesaHawaiana","molletes","omelett","sandwich","cheesecakeFresa","cheesecakeGuayaba",
+  "crepaHelado","crepas","payLimon","Waffles","cerveza","margarita","mojitos","vinoTinto","piñaColada",
+  "vodkaSabores","cafeAmericano","expresso","chocolate","teOrganico","capuccino","tizana","teFrutos",
+  "aguasSabor","refresco","smoothie","frapuccino","jugosNaturales"];
+
+  //FUNCION PARA CHECAR LOS INPUT QUE SELECCIONO EL USUARIO Y OBTENER EL NOMBRE DE LA COMIDA E IR SUMANDO EL PRECIO
+  function checarElementos(){
+  	var pedido=[]; //ARRAY PARA ALMACENAR LOS OBJETOS CON LA INFORMACION DE LAS COMIDAS QUE EL USUARIO PIDIO
+  	var totalPrecio=0; //VARIABLE PARA IR SUMANDO LOS PRECIOS DE LAS COMIDAS
+  	document.getElementById("orden").removeAttribute("hidden");
+  	document.getElementById("tabla").innerHTML='';
+  	//SE ITERA SOBRE EL ARRAY DE IDS
+  	ids.forEach(function(item,index,arra){
+  	let elemento=document.getElementById(item);//OBTENEMOS EL ELEMENTO
+  	//SE VERIFICA SI EL INPUT A SIDO SELECCIONADO O NO
+  	if(elemento.checked==true){
+  	//EN CASO DE HABER SIDO SELECCIONADO
+
+  	let obj=JSON.parse(elemento.value);//LA CADENA OBTENIDA DE SU PROPIEDAD VALUE SE PASA A UN OBJETO JSON
+  	//EL OBJETO SE ALMACENA EN EL ARRAY PEDIDO
+  	pedido.push(obj);
+  	totalPrecio+=obj.precio;//EL PRECIO DE CADA COMIDA SE VA SUMAND
+   }
+  });
+  // SE SELECCIONA LA TABLA
+  let tabla=document.getElementById("tabla");
+  //FUNCION ITERAR SOBRE LOS OBJETOS DE LA COMIDA
+  pedido.forEach(function(item,index,arra){
+    //SE AGREGA A LA TABLA EL NOMBRE DE LA COMIDA Y SU PRECIO
+    tabla.innerHTML+='&lttr>&lttd>'+item.descripcion+'&lt/td>'+'&lttd>'+item.precio+'&lt/td>&lt/tr>';
+  });
+
+  //AL FINAL DE LA TABLA SE AGREGA EL TOTAL
+  tabla.innerHTML+='&lttr>&lttd>Total:&lt/td>'+'&lttd>'+totalPrecio+'&lt/td>&lt/tr>';
+  //SE RESETEAN LOS CHECKBOX DE LA CARTA
+  document.getElementById("frmCarta").reset();
+  }
+          </pre>
+        </div>
+      </div>
+
+
+
+      <!-------------------Scripts------------------>
+      <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    	<script type="text/javascript" src="../js/materialize.min.js"></script>
+    	<script type="text/javascript" src="../js/app.js"></script>
+  </body>
+</html>
