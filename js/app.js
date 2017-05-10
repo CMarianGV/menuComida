@@ -1,7 +1,7 @@
 $(document).ready(function(){
        $('.carousel.carousel-slider').carousel({fullWidth: true});
         $(".button-collapse").sideNav({
-	      menuWidth: 150, 
+	      menuWidth: 150,
 	    });
     });
 
@@ -16,20 +16,20 @@ function checarElementos(){
 	var totalPrecio=0; //VARIABLE PARA IR SUMANDO LOS PRECIOS DE LAS COMIDAS
 	document.getElementById("orden").removeAttribute("hidden");
 	document.getElementById("tabla").innerHTML='';
-	//SE ITERA SOBRE EL ARRAY DE IDS 
+	//SE ITERA SOBRE EL ARRAY DE IDS
 	ids.forEach(function(item,index,arra){
 		let elemento=document.getElementById(item);//OBTENEMOS EL ELEMENTO
 		//SE VERIFICA SI EL INPUT A SIDO SELECCIONADO O NO
 		if(elemento.checked==true){
 			//EN CASO DE HABER SIDO SELECCIONADO
-			
+
 			let obj=JSON.parse(elemento.value);//LA CADENA OBTENIDA DE SU PROPIEDAD VALUE SE PASA A UN OBJETO JSON
 			//EL OBJETO SE ALMACENA EN EL ARRAY PEDIDO
 			pedido.push(obj);
 			totalPrecio+=obj.precio;//EL PRECIO DE CADA COMIDA SE VA SUMAND
 		 }
 	});
-	// SE SELECCIONA LA TABLA 
+	// SE SELECCIONA LA TABLA
 	let tabla=document.getElementById("tabla");
 	//FUNCION ITERAR SOBRE LOS OBJETOS DE LA COMIDA
 	pedido.forEach(function(item,index,arra){
@@ -37,8 +37,8 @@ function checarElementos(){
 		tabla.innerHTML+='<tr><td>'+item.descripcion+'</td>'+'<td>'+item.precio+'</td></tr>';
 	});
 
-	//AL FINAL DE LA TABLA SE AGREGA EL TOTAL 
+	//AL FINAL DE LA TABLA SE AGREGA EL TOTAL
 	tabla.innerHTML+='<tr><td>Total:</td>'+'<td>'+totalPrecio+'</td></tr>';
-	//SE RESETEAN LOS CHECKBOX DE LA CARTA 
+	//SE RESETEAN LOS CHECKBOX DE LA CARTA
 	document.getElementById("frmCarta").reset();
 }

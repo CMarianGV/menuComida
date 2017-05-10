@@ -9,10 +9,6 @@
 	<title>Gondola</title>
 </head>
 
-<!--DESCRIPCIÓN DEL PROYECTO-->
-<!--Aplicación web que muestra un catalógo de un menú de un restaurante ofreciendo las tres
-comidas del día con su respectiva entrada, plato fuerte, postre y bebida, en la sección de
-"ARMA TU MENÚ" podras seleccionar todo lo que quieras ordenar y hara una confirmación de la orden-->
 <body>
 	<div class=miContainer>
 	<!--Listas para la barra de navegación, se diseña una lista por cada Menú del día
@@ -85,8 +81,8 @@ comidas del día con su respectiva entrada, plato fuerte, postre y bebida, en la
 	  <div class="nav-wrapper "><!--clases que nos ayudan en el diseño-->
 	  <!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
 				principal de la aplicación-->
-	    <a href="index.html" class="brand-logo hide-on-small-only"> Gondola Restaurant </a>
-	    <a href="index.html" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">Gondola Restaurant</i></a>
+	    <a href="index.html" class="brand-logo hide-on-med-and-down"> Gondola Restaurant </a>
+	    <a href="index.html" data-activates="mobile-demo" class="button-collapse">Gondola Restaurant</a>
 	    <div class="row">
 	    	<!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
 	    	<ul class="right hide-on-med-and-down">
@@ -115,24 +111,28 @@ comidas del día con su respectiva entrada, plato fuerte, postre y bebida, en la
 	  </div>
 	</nav>
 
-	<h1 class="white-text">Menu del día</h1>
-	<!--Sección del carrosuel donde se muestra el slogan del restaurante y el menú del día-->
-	<div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-item deep-orange  darken-3 white-text img4" href="#one!">
-		<h1 id="logo" >Gondola Restaurant</h1>
-		<h3 class="white-text" id="trans">El lugar ideal para disfrutar de la compañia de tus seres queridos</h3>
-    </div>
-    <div class="carousel-item deep-orange  darken-3 white-text  img1"  href="#two!">
-				<h1 id="trans">Desayuno por solo $120</h1>
-    </div>
-    <div class="carousel-item deep-orange  darken-2 white-text img2 " href="#three!">
-      <h1 id="trans">Comida por solo $180</h1>
-    </div>
-    <div class="carousel-item deep-orange  darken-1 white-text img3 " href="#four!">
-      <h1 id="trans">Cena por solo $150</h1>
-    </div>
-  </div>
-</div>
+	<h2 class="white-text">Tu opinión cuenta</h2>
+	<div class="container">
+	 <div class="comment-box">
+		 <div class="comment-form">
+			 <div class="header">Deja tu comentario</div>
+			 <form>
+				 <div>
+					 <input type="text" id="name" placeholder="Nickname"/>
+				 </div>
+				 <div>
+					 <textarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario"></textarea>
+				 </div>
+				 <button type="submit">Comentar</button>
+			 </form>
+		 </div>
+		 <div>
+			 <h4 class="header">Comentarios</h4>
+			 <div id="comments"></div>
+		 </div>
+		 <div class="footer"><hr><p>&copy 2016 by Josh Bivens</p></div>
+	 </div>
+ </div>
 
 <!--Sección de los archivos javascript-->
 <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
