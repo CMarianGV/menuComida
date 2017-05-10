@@ -42,3 +42,14 @@ function checarElementos(){
 	//SE RESETEAN LOS CHECKBOX DE LA CARTA
 	document.getElementById("frmCarta").reset();
 }
+
+//-------------------------------------------FIREBASE-----------------------------------------------------
+var config = {
+  apiKey: "AIzaSyAacfRnCzM7uNzrUe0rEpait-WYTplcfbk",
+  authDomain: "menurestaurante-c3adb.firebaseapp.com",
+  databaseURL: "https://menurestaurante-c3adb.firebaseio.com",
+  projectId: "menurestaurante-c3adb",
+  storageBucket: "menurestaurante-c3adb.appspot.com",
+  messagingSenderId: "1076545950471"
+};
+firebase.initializeApp(config);
