@@ -44,12 +44,13 @@ function checarElementos(){
 }
 
 //-------------------------------------------FIREBASE-----------------------------------------------------
-var config = {
-  apiKey: "AIzaSyAacfRnCzM7uNzrUe0rEpait-WYTplcfbk",
-  authDomain: "menurestaurante-c3adb.firebaseapp.com",
-  databaseURL: "https://menurestaurante-c3adb.firebaseio.com",
-  projectId: "menurestaurante-c3adb",
-  storageBucket: "menurestaurante-c3adb.appspot.com",
-  messagingSenderId: "1076545950471"
-};
-firebase.initializeApp(config);
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
+    authDomain: "menu-restaurante.firebaseapp.com",
+    databaseURL: "https://menu-restaurante.firebaseio.com",
+    projectId: "menu-restaurante",
+    storageBucket: "menu-restaurante.appspot.com",
+    messagingSenderId: "327373634763"
+  };
+  firebase.initializeApp(config);
