@@ -1,0 +1,25 @@
+{
+  "name": "restaurante-menu",
+  "version": "1.0.0",
+  "description": "aplicacion web de un del menu de un restaurante con comentarios y chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMarianGV/menuComida.git"
+  },
+  "keywords": [
+    "firebase"
+  ],
+  "author": "lrodreyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CMarianGV/menuComida/issues"
+  },
+  "homepage": "https://github.com/CMarianGV/menuComida#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
