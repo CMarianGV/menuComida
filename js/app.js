@@ -67,6 +67,8 @@ function checarElementos(){
 	    nombre: name,
 	    comentario: comment
 	  });
+
+  	document.getElementById("formulario").reset();
   }
 
   
