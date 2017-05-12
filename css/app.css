@@ -168,7 +168,7 @@ form ::-webkit-input-placeholder {
 
 input[type="text"], textarea {
 	font-family: 'Josefin Slab', serif;
-	font-size: 30px;
+	font-size: 20px;
   margin: 5px 10px;
   outline: none;
   background: #595959;
@@ -178,7 +178,8 @@ input[type="text"], textarea {
 
 textarea {
   resize: none;
-  width: 100%;
+	height: 300px;
+	width: 500px;
 }
 
 input[type="text"] {
