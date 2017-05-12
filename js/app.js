@@ -44,38 +44,61 @@ function checarElementos(){
 }
 
 //-------------------------------------------FIREBASE-----------------------------------------------------
- // Initialize Firebase
-  
-var config = {
-	    apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
-	    authDomain: "menu-restaurante.firebaseapp.com",
-	    databaseURL: "https://menu-restaurante.firebaseio.com",
-	    projectId: "menu-restaurante",
-	    storageBucket: "menu-restaurante.appspot.com",
-	    messagingSenderId: "327373634763"
-	  };
 
+ function Comentar(){
+   var config = {
+     apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
+     authDomain: "menu-restaurante.firebaseapp.com",
+     databaseURL: "https://menu-restaurante.firebaseio.com",
+     projectId: "menu-restaurante",
+     storageBucket: "menu-restaurante.appspot.com",
+     messagingSenderId: "327373634763"
+   };
+   firebase.initializeApp(config);
+   const dbref= firebase.database().ref().child('comentarios/');
 
-  function Comentar(){
-	firebase.initializeApp(config);
+   //OBTENER LOS DATOS DEL FORMULARIO
+   const form = document.querySelector("form");
 
-  	//OBTENER LOS DATOS DEL FORMULARIO
-  	var name=document.getElementById("name").value.toString();
-  	var comment=document.getElementById('comment').value.toString();
-  	
-  	
+   form.addEventListener("submit", postComment);
 
-  	firebase.database().ref('comentarios/').push({
-	    nombre: name,
-	    comentario: comment
-	  });
+   const timeStamp = () => {
+     let options = {
+       month: '2-digit',
+       day: '2-digit',
+       year: '2-digit',
+       hour: '2-digit',
+       minute:'2-digit'
+     };
+     let now = new Date().toLocaleString('es-MX', options);
+     return now;
+   };
 
-  	document.getElementById("name").value = '';
-  	document.getElementById("comment").value = '';
+   function postComment(e) {
+     e.preventDefault();
+     let name = document.getElementById("name").value;
+     let comment = document.getElementById("comment").value;
+
+     if (name && comment) {
+       dbref.push({
+         name: name,
+         comment: comment,
+         time: timeStamp()
+       });
+     }
+
+     document.getElementById("name").value = '';
+     document.getElementById("comment").value = '';
+   };
+
+   dbref.on("child_added", function(snapshot) {
+     let comment = snapshot.val();
+     addComment(comment.name, comment.comment, comment.time);
+   });
+
+   const addComment = (name, comment, timeStamp) => {
+     let comments = document.getElementById("comments");
+     comments.innerHTML = `<hr><h4>${name} Comento:<span>${timeStamp}</span></h4><p>${comment}</p>${comments.innerHTML}`;
+   }
+
   }
-
-  
-
-   
-
-
