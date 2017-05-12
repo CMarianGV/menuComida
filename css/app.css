@@ -176,7 +176,7 @@ input[type="text"], textarea {
 
 textarea {
   resize: none;
-  width: 85%;
+  width: 100%;
 }
 
 input[type="text"] {
@@ -197,6 +197,9 @@ button {
 }
 button:hover {
   background: #D3775D;
+}
+button:active{
+	background: #b51915;
 }
 
 .footer p {
