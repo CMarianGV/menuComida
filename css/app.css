@@ -167,6 +167,8 @@ form ::-webkit-input-placeholder {
 }
 
 input[type="text"], textarea {
+	font-family: 'Josefin Slab', serif;
+	font-size: 30px;
   margin: 5px 10px;
   outline: none;
   background: #595959;

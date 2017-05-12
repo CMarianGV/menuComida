@@ -17,7 +17,7 @@ dbref.on("child_added", function(snapshot) {
 
  const addComment = (name, comment, timeStamp) => {
    let comments = document.getElementById("comments");
-   comments.innerHTML = `<hr><h4>${name} says<span>${timeStamp}</span></h4><p>${comment}</p>${comments.innerHTML}`;
+   comments.innerHTML = `<hr><h4 id="t">${name} comento:<span id="letra">${timeStamp}</span></h4><p id="letra">${comment}</p>${comments.innerHTML}`;
  }
 
 function Comentar(){
@@ -38,7 +38,7 @@ function Comentar(){
      return now;
    };
 
-   
+
      let name = document.getElementById("name").value;
      let comment = document.getElementById("comment").value;
 
@@ -52,7 +52,7 @@ function Comentar(){
 
      document.getElementById("name").value = '';
      document.getElementById("comment").value = '';
-   
+
 
    dbref.on("child_added", function(snapshot) {
      let comment = snapshot.val();
