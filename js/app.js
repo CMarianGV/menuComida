@@ -98,7 +98,7 @@ function checarElementos(){
 
    const addComment = (name, comment, timeStamp) => {
      let comments = document.getElementById("comments");
-     comments.innerHTML = `<hr><h4>${name} says<span>${timeStamp}</span></h4><p>${comment}</p>${comments.innerHTML}`;
+     comments.innerHTML = `<hr><h4>${name}    Comento: <span>${timeStamp}</span></h4><p>${comment}</p>${comments.innerHTML}`;
    }
 	  	/*var config = {
 	    apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
