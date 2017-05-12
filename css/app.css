@@ -198,8 +198,11 @@ button {
 button:hover {
   background: #D3775D;
 }
-button:active{
-	background: #b51915;
+#comments span{
+  float: right
+  margin-right: 10px
+  font-size: 12px
+  font-weight: 300
 }
 
 .footer p {
