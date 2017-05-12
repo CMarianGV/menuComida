@@ -45,7 +45,7 @@ function checarElementos(){
 
 //-------------------------------------------FIREBASE-----------------------------------------------------
 
-/*  function Comentar(){
+ function Comentar(){
 	  	var config = {
 	    apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
 	    authDomain: "menu-restaurante.firebaseapp.com",
@@ -66,4 +66,4 @@ function checarElementos(){
 	  });
 
   	document.getElementById("formulario").reset();
-  }*/
+  }
