@@ -46,10 +46,7 @@ function checarElementos(){
 //-------------------------------------------FIREBASE-----------------------------------------------------
  // Initialize Firebase
   
-
-
-  function Comentar(){
-	  	var config = {
+var config = {
 	    apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
 	    authDomain: "menu-restaurante.firebaseapp.com",
 	    databaseURL: "https://menu-restaurante.firebaseio.com",
@@ -57,18 +54,24 @@ function checarElementos(){
 	    storageBucket: "menu-restaurante.appspot.com",
 	    messagingSenderId: "327373634763"
 	  };
+
+
+  function Comentar(){
+	firebase.initializeApp(config);
+
   	//OBTENER LOS DATOS DEL FORMULARIO
   	var name=document.getElementById("name").value.toString();
   	var comment=document.getElementById('comment').value.toString();
   	
-  	firebase.initializeApp(config);
+  	
 
   	firebase.database().ref('comentarios/').push({
 	    nombre: name,
 	    comentario: comment
 	  });
 
-  	document.getElementById("formulario").reset();
+  	document.getElementById("name").value = '';
+  	document.getElementById("comment").value = '';
   }
 
   
