@@ -111,26 +111,30 @@
 	    </div>
 	  </div>
 	</nav>
-
+<!--Realizar una pestaña dentro de la practica pasada donde se puedan realizar comentarios
+y de igual forma se puedan visualizar comentarios de otras personas-->
 	<h2 class="white-text">Tu opinión cuenta</h2>
 	<div class="container">
-	 <div class="comment-box">
-		 <div class="comment-form">
+	 <div class="comment-box"> <!--Este es un div que va a contener toda la sección donde comentaras y estaran los comentarios-->
+		 <div class="comment-form"><!--Esta es la sección exclusiva para poder comentar-->
 			 <div class="header">Deja tu comentario</div>
 
 				 <div>
-					 <input type="text" id="name" placeholder="Nickname (Apodo)"/>
+					 <input type="text" id="name" placeholder="Nickname (Apodo)"/><!--Con este input se va a optener el apodo
+						 con el cual la persona quiere dejar su comentario el id "name" se va a utilizar en el javascript-->
 				 </div>
 				 <div>
-					 <textarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario"></textarea>
+					 <textarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario"></textarea><!--En este textarea
+						 van a poder dejar su comentario y el id "comment" se utilizara mas adelante en el javascript-->
 				 </div>
 
-				 <button onClick="Comentar()">Comentar</button>
+				 <button onClick="Comentar()">Comentar</button> <!--Con este boton y la llamada al metodo Comentar() al hacer click
+					 manda a llamar a la función Comentar en el javascript-->
 
 		 </div>
-		 <div>
+		 <div><!--Esta sección es donde se visulizaran los comentarios-->
 			 <h4 class="header" id="t">Comentarios</h4>
-			 <div id="comments">
+			 <div id="comments"><!--Por medio del id "comments" vamos a utilizarlo en el JavaScript para visualizar comentarios-->
 
 			 </div>
 		 </div>
@@ -142,7 +146,8 @@
 <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="./js/app.js"></script>
-<script type="text/javascript" src="./js/comentarios.js"></script>
+<script type="text/javascript" src="./js/comentarios.js"></script> <!--Este script nos ayuda a mandar a llamar
+	al archivo cometarios.js que nos ayudara a poder comentar y visualizar los comentarios-->
 
 </body>
 </html>
