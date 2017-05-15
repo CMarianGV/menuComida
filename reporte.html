@@ -61,6 +61,7 @@
     				<li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
     				<li><a class="dropdown-button" href="./pedido.html">Pedidos</a></li>
     				<li><a class="dropdown-button" href="./comentarios.html">Comentarios</a></li>
+            <li><a class="dropdown-button" href="#">Chat</a></li>
     				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
     				<li><a class="dropdown-button" href="./reporte.html">Info</a></li>
 
@@ -72,6 +73,7 @@
     		        <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
     		        <li><a class="dropdown-button" href="./pedido.html">Pedidos</a></li>
     						<li><a class="dropdown-button" href="./comentarios.html">Comentarios</a></li>
+                <li><a class="dropdown-button" href="#">Chat</a></li>
     						<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
     						<li><a class="dropdown-button" href="./reporte.html">Info</a></li>
     		    </ul>
@@ -254,7 +256,7 @@ function Comentar(){
 
   /*las siguientes dos funciones hacen el mismo procedimiento que las primeras pero en este caso es unicamente
   para poder obtener de la base de datos y poder visualizar el comentario que se acaba de realizar*/
-  
+
   dbref.on("child_added", function(snapshot) {
    let comment = snapshot.val();
      addComment(comment.name, comment.comment, comment.time);
