@@ -137,14 +137,114 @@
           <h3 class="center white-text">Codigo HTML</h3>
           <h3 class="center white-text">Componente principal</h3>
           <pre class="language-markup">
+&ltdiv class="miContainer">
+	&ltapp-navbar>&lt/app-navbar>
+  &ltdiv class="right-align" *ngIf="!administrador && !_ls.user">
+   &lt!--Con el metodo click en esta etiqueta estamos indicando que al presionar el boton
+   tendra que hacer una llamada a la función loginAdministrador() para poder visualizar
+   la ventana del administrador que es en la cual va a poder responder los mensajes-->
+  	&lta class="waves-effect waves-light btn-large red darken-4" (click)="loginAdministrador()">Administrador&lt/a>
+  &lt/div>
+  &lt!--En este contenerdor estamos indicando que se tiene que cumplir la condicional que en este caso
+  se a un usuario el que la utilice, para mostrar cierto tipo de contenido-->
+  &ltng-container *ngIf="!_ls.user">
+  	&ltdiv class="container-column">
+  		&lth1 class="white-text">Ingresa y dejanos saber tus dudas&lt/h1>
+  		&lt!--Por medio del metodo click estamos haciendo un llamado a la función login, la cual nos
+  		nos va a permitir logearnos por medio de nuestra cuenta de gmail-->
+  		&lta class="waves-effect waves-light btn-large red darken-4" (click)="login()">Login&lt/a>
+  	&lt/div>
+  &lt/ng-container>
+
+  &ltng-container *ngIf="_ls.user">
+  	&ltdiv class="container-column">
+      &lt!--En esta parte estamos indicando que por medio del llamado a la función logout vamos a
+      cerrar la sesión del usuario que este dejando su mensaje-->
+    	&lta class="waves-effect waves-light btn-large red darken-4" (click)="logout()">Logout&lt/a>
+      &ltdiv class="chat-window animated fadeIn fast">
+  			&lth3 class="white-text center">Chatea con nosotros&lt/h3>
+  				&lt!--Esta directiva nos permite lograr que por medio de componentes, puedas ir fraccionando
+  				proyecto en este caso, con la etiqueta app-chat estamos indicando que en esa seccion de la
+  			  pagina va a estar contenido la sección de los mensajes y por medio de otro componente se
+  				realizara toda la visulización y estructura del chat-->
+  				&ltapp-chat>&lt/app-chat>
+  		&lt/div>
+  	&lt/div>
+  &lt/ng-container>
+&lt/div>
           </pre>
           <h3 class="center white-text">Componente del chat</h3>
           <pre class="language-markup">
+&ltdiv class="miContainer">
+&lt!--ng-container es un contenedor que es utilizado en angular y ngIf es una directiva
+ que nos permite visualizar cierto tipo de contenido dependiendo si se cumple la condicional o no
+en este caso que _ls.user sea igual a administrador-->
+&ltng-container *ngIf="_ls.user=='administrador'">
+	&ltdiv class="listado-chats grey lighten-1 center">
+		&ltspan class="red-text text-darken-4" id="hola">Mensajes Recibidos&lt/span>
+		&lt!--ngFor es una directiva ciclica que nos va a ayudar a obtener cada uno de los chats personalizados
+		con el pip async estamos indicando que solo queremos los mensajes sin codigo basura -->
+		&ltdiv *ngFor="let chat of _ls.chats | async">
+			&lt!--Aqui estamos indicando que cada chat lo va a mostrar en un boton con el nombre de la persona
+			que te envio el mensaje y al hacerle click va a visualizar el administrador el chat de esa persona
+	  	la parte del |JSON estamos indicando que no lo queremos en un archivo .json si no solo el valor
+			y al hacer click va a mandar a llamar al metodo consultar-->
+		&lta (click)="consultar(chat.uid)" class="waves-effect waves-light btn-large red white-text" id="cambios">Responder a {{chat.nombre |json}}&lt/a>
+		&lt/div>
+	&lt/div>
+&lt/ng-container>
+
+&ltdiv class="container-chat">
+	&ltdiv id="app-mensajes" class="app-mensajes grey lighten-1">
+		&lt!--En esta linea ngFor nos va a permitir obtener los mensajes de la base de datos
+		 que se han enviado del lado del usuario para poder visualizarlos y de igual forma se utiliza el pip
+	 	 async para que se muestra la información sin basura -->
+		&ltdiv *ngFor="let mensaje of _ls.mensajes | async">
+	    &lt!--En la etiqueta span y en la etiqueta p, se estaran mostrando el nombre del usuario y
+			el mensaje que esta enviando o recibiendo -->
+     	&ltspan class="red darken-2 white-text">
+	      {{ mensaje.nombre }}
+	    &lt/span>
+	    &ltp class="grey grey-text text-darken-3">
+	      Q: {{ mensaje.mensaje }}
+	    &lt/p>
+	 	&lt/div>
+	&lt/div>
+&lt!--Este contenedor nos permite enviarle el mensaje al administrador-->
+	&ltng-container *ngIf="_ls.user!='administrador'">
+		&lt!--ngModel nos permite que todo lo que se esta enviando mediante el input, se va a almacenar
+		en una variable llamada mensaje, la cuál va a ser utilizada en el código de javascript-->
+	&ltinput [(ngModel)]="mensaje"
+	        name="mensaje"
+	        (keyup.enter)="enviar()"
+	        placeholder="Deja tu mensaje..."
+					class="grey darken-4 center white-text">
+	&lt!--Con el metodo click que se esta utilizando en la etiqueta a, estamos indicando una llamada a
+	una función que se encuentra en el javascript para enviar los mensajes a la base de datos-->
+	&lta class="waves-effect waves-light btn-large red darken-4" (click)="enviar()">Enviar&lt/a>
+	&lt/ng-container>
+  &lt!--En este contenedor esta haciendo lo mismo que el anterior, pero en este caso son los Mensajes
+  que estara enviando el administrador en respuesta a los chat de cada persona-->
+	&ltng-container *ngIf="_ls.user=='administrador'">
+		&ltinput [(ngModel)]="mensaje"
+	        name="mensaje"
+	        (keyup.enter)="enviarAdm()"
+	        placeholder="Deja tu mensaje..."
+					class="grey darken-4 center white-text">
+		&lta class="waves-effect waves-light btn-large red darken-4" (click)="enviarAdm()">Enviar&lt/a>
+	&lt/ng-container>
+&lt/div>
+&lt/div>
           </pre>
         </div>
 
         <div class="col l6 m12 s12">
           <h3 class="center white-text">Código JavaScript</h3>
+          <h3 class="center white-text">Componente principal</h3>
+          <pre class="language-markup">
+
+          </pre>
+          <h3 class="center white-text">Componente del chat</h3>
           <pre class="language-markup">
 
           </pre>
