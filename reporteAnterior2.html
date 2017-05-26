@@ -1,0 +1,280 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Slab:400,600,700" rel="stylesheet">
+    <title>Reporte</title>
+</head>
+
+<body class="portada">
+    <div class=miContainer>
+      <!-----------------------------Menú del restaurante--------------------------->
+      <ul id="menuDesayuno" class="dropdown-content">
+  			<li><a href="./desayuno/desayunoEntrada.html">Entrada</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./desayuno/desayunoFuerte.html">Plato fuerte</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./desayuno/desayunoPostre.html">Postre</a></li>
+  		</ul>
+
+  		<ul id="menuComida" class="dropdown-content">
+  			<li><a href="./comida/comidaEntrada.html">Entrada</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./comida/comidaFuerte.html">Plato fuerte</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./comida/comidaPostre.html">Postre</a></li>
+  		</ul>
+
+  		<ul id="menuCena" class="dropdown-content">
+  			<li><a href="./cena/cenaEntrada.html">Entrada</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./cena/cenaFuerte.html">Plato fuerte</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./cena/cenaPostre.html">Postre</a></li>
+  		</ul>
+
+  		<ul id="menuBebidas" class="dropdown-content">
+  			<li><a href="./bebida/bebidaFria.html">Bebidas frias</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./bebida/bebidaCaliente.html">Bebidas calientes</a></li>
+  			<li class="divider"></li>
+  			<li><a href="./bebida/bebidaAlcohol.html">Bebidas alcoholicas</a></li>
+  		</ul>
+
+      <nav class="teal"><!--Etiqueta para la barra de la vegación la clase ayuda al diseño-->
+    	  <div class="nav-wrapper "><!--clases que nos ayudan en el diseño-->
+    	  <!--Etiqueta para el logo del restaurante con un href que nos llevara a la pagina
+    				principal de la aplicación-->
+    	    <a href="index.html" class="brand-logo hide-on-small-only"> Gondola Restaurant </a>
+    	    <a href="index.html" data-activates="mobile-demo" class="button-collapse ">Gondola Restaurant</a>
+    	    <div class="row">
+    	    	<!--Etiqueta que nos permite diseñar una lista con una clase que nos ayuda al diseño responsivo que indica que esta lista se va a ocultar cuando llegue a una versión de tabelet o telefono y mediante la etiqueta del logo del restaurante aparecera otro tipo de menú-->
+    	    	<ul class="right hide-on-med-and-down">
+
+    				<li><a class="dropdown-button" data-activates="menuDesayuno">Desayunos</a></li>
+    				<li><a class="dropdown-button" data-activates="menuComida">Comidas</a></li>
+    				<li><a class="dropdown-button" data-activates="menuCena">Cenas</a></li>
+    				<li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
+    				<li><a class="dropdown-button" href="./pedido.html">Pedidos</a></li>
+    				<li><a class="dropdown-button" href="./comentarios.html">Comentarios</a></li>
+            <li><a class="dropdown-button" href="https://chat-4292c.firebaseapp.com">Chat</a></li>
+    				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+    				<li><a class="dropdown-button" href="./reporte.html">Info</a></li>
+
+    	    	</ul>
+    	    	<ul class="side-nav" id="mobile-demo">
+    		        <li><a class="dropdown-button" data-activates="menuDesayunoMovil">Desayunos</a></li>
+    		        <li><a class="dropdown-button" data-activates="menuComidaMovil" >Comidas</a></li>
+    		        <li><a class="dropdown-button" data-activates="menuCenaMovil" >Cenas</a></li>
+    		        <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
+    		        <li><a class="dropdown-button" href="./pedido.html">Pedidos</a></li>
+    						<li><a class="dropdown-button" href="./comentarios.html">Comentarios</a></li>
+                <li><a class="dropdown-button" href="https://chat-4292c.firebaseapp.com">Chat</a></li>
+    						<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
+    						<li><a class="dropdown-button" href="./reporte.html">Info</a></li>
+    		    </ul>
+    	    </div>
+    	  </div>
+    	</nav>
+
+      <!---------------------Portada del tecnológico--------------------------------------->
+      <div class="row">
+        <div class="teal darken-4 col l12 m12 s12" id="h1">
+          <div class="row hide-on-med-and-down">
+            <div class="col l3 m3">
+              <img src="./images/Portada/SEP_LOGO.png" class="responsive-img">
+            </div>
+              <div class="col l7 m7">
+                <div class="col l12 m12">
+                  <h3 class="grey-text text-lighten-2 center" id="t">TECNOLÓGICO NACIONAL DE MÉXICO </h4>
+                </div>
+                <div class="col l12 m12">
+                  <h4 class="grey-text text-lighten-2 center" id="t">INSTITUTO TECNOLÓGICO DE CUAUTLA</h6>
+                </div>
+              </div>
+              <div class="col l2 m2">
+                <img src="./images/Portada/ITC_LOGO1.png" class="responsive-img">
+             </div>
+          </div>
+            <div class="row hide-on-large-only">
+            <div class="col s8">
+              <h6 class="grey-text text-lighten-2 center" id="t">TECNM</h6>
+              <h6 class="grey-text text-lighten-2 center" id="t">ITC</h6>
+            </div>
+            <div class="col s4">
+              <img src="./images/Portada/ITC_LOGO1.png" class="responsive-img">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------Inicio del Reporte--------------------------------->
+      <div class="row" id="trans">
+        <h3 class="white-text center">Sección de comentarios</h3>
+        <h3 class="center white-text">Visual</h3>
+        <div class="col l6 m6 s6">
+          <img src="./images/reporte/Comentario.png" class="responsive-img">
+        </div>
+        <div class="col l6 m12 s12" >
+          <img src="./images/reporte/Comentarios.png" class="responsive-img">
+        </div>
+
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Codigo HTML</h3>
+          <pre class="language-markup">
+&lt!--Realizar una pestaña dentro de la practica pasada donde se puedan realizar comentarios
+y de igual forma se puedan visualizar comentarios de otras personas-->
+
+&lth2 class="white-text">Tu opinión cuenta&lt/h2>
+	&ltdiv class="container">
+	 &ltdiv class="comment-box">&lt!--Este es un div que va a contener toda la sección donde comentaras y estaran los comentarios-->
+		 &ltdiv class="comment-form">&lt!--Esta es la sección exclusiva para poder comentar-->
+   		 &ltdiv class="header">Deja tu comentario&lt/div>
+       &ltdiv>
+         &ltinput type="text" id="name" placeholder="Nickname (Apodo)"/>&lt!--Con este input se va a optener el apodo
+        	 con el cual la persona quiere dejar su comentario el id "name" se va a utilizar en el javascript-->
+       &lt/div>
+       &ltdiv>
+      	 &lttextarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario">&lt/textarea>&lt!--En este textarea
+      		 van a poder dejar su comentario y el id "comment" se utilizara mas adelante en el javascript-->
+       &lt/div>
+			 &ltbutton onClick="Comentar()">Comentar&lt/button>&lt!--Con este boton y la llamada al metodo Comentar() al hacer click
+			 manda a llamar a la función Comentar en el javascript-->
+     &lt/div>
+     &ltdiv>&lt!--Esta sección es donde se visulizaran los comentarios-->
+    	 &lth4 class="header" id="t">Comentarios&lt/h4>
+    	 &ltdiv id="comments">&lt!--Por medio del id "comments" vamos a utilizarlo en el JavaScript para visualizar comentarios-->
+
+    	 &lt/div>
+     &lt/div>
+     &ltdiv class="footer">&lthr>&ltp>@Gondola Restaurant&lt/p>&lt/div>
+  &lt/div>
+&lt/div>
+          </pre>
+        </div>
+
+        <div class="col l6 m12 s12">
+          <h3 class="center white-text">Código JavaScript</h3>
+          <pre class="language-markup">
+/*Esta variable config es una variable que se utiliza para Firebase que es una plataforma
+la cual nos va a permitir almacenar todos los comentarios se puede visualizar uan URL donde
+se encuentran almacenados todos los comentarios*/
+
+var config = {
+   apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
+   authDomain: "menu-restaurante.firebaseapp.com",
+   databaseURL: "https://menu-restaurante.firebaseio.com",
+   projectId: "menu-restaurante",
+   storageBucket: "menu-restaurante.appspot.com",
+   messagingSenderId: "327373634763"
+};
+
+/*En esta parte se esta inicializando la base de datos*/
+
+firebase.initializeApp(config);
+
+/*La constante dbref es con la cual mandaremos a llamar a la base de datos dentro de una ramificación
+llamada comentarios/ en la cual estaran alamacenados los datos o archivos JSON ya que al ser una base
+de datos NoSQL cada paquete de información que quieras guardan se almacena en archivos JSON sin necesidad
+de hacer una tabla estructurada
+
+const dbref= firebase.database().ref().child('comentarios/');
+
+/*En esta parte por medio de la constante dbref y el metodo .on estamos indicando que por medio del
+child_added y la funcion con la variable snapshot obtenemos todos los comentarios de la base de datos
+por medio de un array para poder visualizarlos y despues los mandamos al metodo addComment con toda
+la información que se va a visualizar en este caso nombre, comentario y fecha en que comento*/
+
+dbref.on("child_added", function(snapshot) {
+   let comment = snapshot.val();
+   addComment(comment.name, comment.comment, comment.time);
+});
+
+/*Una vez que todos los comentarios ya se obtuvieron es momento de visualizarlos en la pagina por la
+constante addComment y con los atributos que se estan recibiendo de la función vamos a mandar a llamar
+al id comments que es la sección en la cual se van a mostrar los comentarios y despues por el metodo
+ineerHTML indicamos que por medio de las etiquetas h4 mostraremos el nombre de quien comento despues
+la fecha y hora en que se realizo el comentario y despues se mostrara el comentario*/
+
+const addComment = (name, comment, timeStamp) => {
+   let comments = document.getElementById("comments");
+   comments.innerHTML = `&lthr>&lth4 id="t">${name} comento:&ltspan id="letra">${timeStamp}&lt/span>&lt/h4>
+   &ltp id="letra">${comment}&lt/p>${comments.innerHTML}`;
+}
+
+/*Con la función comentar que se mando a llamar en el metodo Onclick en el HTML una vez que se presiona la
+mandamos a llamar y empieza el proceso del obtención del comentario y guardarlo en la base de datos*/
+
+function Comentar(){
+
+//OBTENER LOS DATOS DEL FORMULARIO
+  /*Por medio de la constante timeStamp estaremos obteniendo el mes, el dia, el año, la hr y los minutos
+  en los cuales se hizo el comentario y vamos a indicar que se va a obtener la fecha local en esta caso de
+  México y que la fecha se tiene que mostrar como se escribe en México*/
+
+  const timeStamp = () => {
+   let options = {
+     month: '2-digit',
+     day: '2-digit',
+     year: '2-digit',
+     hour: '2-digit',
+     minute:'2-digit'
+   };
+   let now = new Date().toLocaleString('es-MX', options);
+   return now;
+  };
+
+  /*Aqui vamos a obtener por medio del getElementById lo que tenga el id de name y el de comment que
+  se especificaron previamente en el documento HTML*/
+
+  let name = document.getElementById("name").value;
+  let comment = document.getElementById("comment").value;
+
+  /*Una vez que se obtuvieron por medio de la constante bdref para mandar a llamar a la base de datos
+  y por medio de push estamos indicando que se tiene que guargar un nuevo documento JSON con sus
+  repectivos campos en este caso el nombre, el comentario y la fecha y hora en la cual se hizo el
+  comentario mandando a llamar al metodo timeStamp*/
+
+  if (name && comment) {
+   dbref.push({
+     name: name,
+     comment: comment,
+     time: timeStamp()
+   });
+  }
+
+  /*En esta sección estamos indicando que una vez que el comentario ha sido agregado a la base de datos
+  los campos con el id name y el id comment tienen que borrar lo que se escribio para que un nuevo
+  comentario pueda ser agregado*/
+
+  document.getElementById("name").value = '';
+  document.getElementById("comment").value = '';
+
+  /*las siguientes dos funciones hacen el mismo procedimiento que las primeras pero en este caso es unicamente
+  para poder obtener de la base de datos y poder visualizar el comentario que se acaba de realizar*/
+
+  dbref.on("child_added", function(snapshot) {
+   let comment = snapshot.val();
+     addComment(comment.name, comment.comment, comment.time);
+   });
+
+   const addComment = (name, comment, timeStamp) => {
+     let comments = document.getElementById("comments");
+     comments.innerHTML = `&lthr>&lth4>${name} says&ltspan>${timeStamp}&lt/span>&lt/h4>&ltp>${comment}
+     &lt/p>${comments.innerHTML}`;
+   }
+ }
+          </pre>
+        </div>
+      </div>
+
+      <!-------------------Scripts------------------>
+      <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    	<script type="text/javascript" src="./js/app.js"></script>
+  </body>
+</html>

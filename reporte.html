@@ -61,7 +61,7 @@
     				<li><a class="dropdown-button" data-activates="menuBebidas">Bebidas</a></li>
     				<li><a class="dropdown-button" href="./pedido.html">Pedidos</a></li>
     				<li><a class="dropdown-button" href="./comentarios.html">Comentarios</a></li>
-            <li><a class="dropdown-button" href="#">Chat</a></li>
+            <li><a class="dropdown-button" href="https://chat-4292c.firebaseapp.com">Chat</a></li>
     				<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
     				<li><a class="dropdown-button" href="./reporte.html">Info</a></li>
 
@@ -73,7 +73,7 @@
     		        <li><a class="dropdown-button" data-activates="menuBebidasMovil" >Bebidas</a></li>
     		        <li><a class="dropdown-button" href="./pedido.html">Pedidos</a></li>
     						<li><a class="dropdown-button" href="./comentarios.html">Comentarios</a></li>
-                <li><a class="dropdown-button" href="#">Chat</a></li>
+                <li><a class="dropdown-button" href="https://chat-4292c.firebaseapp.com">Chat</a></li>
     						<li><a class="dropdown-button" href="./contacto.html">Contacto</a></li>
     						<li><a class="dropdown-button" href="./reporte.html">Info</a></li>
     		    </ul>
@@ -117,162 +117,344 @@
         <h3 class="white-text center">Sección de comentarios</h3>
         <h3 class="center white-text">Visual</h3>
         <div class="col l6 m6 s6">
-          <img src="./images/reporte/Comentario.png" class="responsive-img">
+          <h3 class="center white-text">Inicio chat</h3>
+          <img src="./images/reporte/chat1.png" class="responsive-img">
         </div>
         <div class="col l6 m12 s12" >
-          <img src="./images/reporte/Comentarios.png" class="responsive-img">
+          <h3 class="center white-text">Ventana Admin</h3>
+          <img src="./images/reporte/chat2.png" class="responsive-img">
+        </div>
+        <div class="col l6 m6 s6">
+          <h3 class="center white-text">Login con gmail</h3>
+          <img src="./images/reporte/chat3.png" class="responsive-img">
+        </div>
+        <div class="col l6 m12 s12" >
+          <h3 class="center white-text">Ventana User</h3>
+          <img src="./images/reporte/chat4.png" class="responsive-img">
         </div>
 
         <div class="col l6 m12 s12">
           <h3 class="center white-text">Codigo HTML</h3>
+          <h3 class="center white-text">Componente principal</h3>
           <pre class="language-markup">
-&lt!--Realizar una pestaña dentro de la practica pasada donde se puedan realizar comentarios
-y de igual forma se puedan visualizar comentarios de otras personas-->
-
-&lth2 class="white-text">Tu opinión cuenta&lt/h2>
-	&ltdiv class="container">
-	 &ltdiv class="comment-box">&lt!--Este es un div que va a contener toda la sección donde comentaras y estaran los comentarios-->
-		 &ltdiv class="comment-form">&lt!--Esta es la sección exclusiva para poder comentar-->
-   		 &ltdiv class="header">Deja tu comentario&lt/div>
-       &ltdiv>
-         &ltinput type="text" id="name" placeholder="Nickname (Apodo)"/>&lt!--Con este input se va a optener el apodo
-        	 con el cual la persona quiere dejar su comentario el id "name" se va a utilizar en el javascript-->
-       &lt/div>
-       &ltdiv>
-      	 &lttextarea id="comment" rows="3" cols="30" placeholder="Escribe tu comentario">&lt/textarea>&lt!--En este textarea
-      		 van a poder dejar su comentario y el id "comment" se utilizara mas adelante en el javascript-->
-       &lt/div>
-			 &ltbutton onClick="Comentar()">Comentar&lt/button>&lt!--Con este boton y la llamada al metodo Comentar() al hacer click
-			 manda a llamar a la función Comentar en el javascript-->
-     &lt/div>
-     &ltdiv>&lt!--Esta sección es donde se visulizaran los comentarios-->
-    	 &lth4 class="header" id="t">Comentarios&lt/h4>
-    	 &ltdiv id="comments">&lt!--Por medio del id "comments" vamos a utilizarlo en el JavaScript para visualizar comentarios-->
-
-    	 &lt/div>
-     &lt/div>
-     &ltdiv class="footer">&lthr>&ltp>@Gondola Restaurant&lt/p>&lt/div>
+&ltdiv class="miContainer">
+	&ltapp-navbar>&lt/app-navbar>
+  &ltdiv class="right-align" *ngIf="!administrador && !_ls.user">
+   &lt!--Con el metodo click en esta etiqueta estamos indicando que al presionar el boton
+   tendra que hacer una llamada a la función loginAdministrador() para poder visualizar
+   la ventana del administrador que es en la cual va a poder responder los mensajes-->
+  	&lta class="waves-effect waves-light btn-large red darken-4" (click)="loginAdministrador()">Administrador&lt/a>
   &lt/div>
+  &lt!--En este contenerdor estamos indicando que se tiene que cumplir la condicional que en este caso
+  se a un usuario el que la utilice, para mostrar cierto tipo de contenido-->
+  &ltng-container *ngIf="!_ls.user">
+  	&ltdiv class="container-column">
+  		&lth1 class="white-text">Ingresa y dejanos saber tus dudas&lt/h1>
+  		&lt!--Por medio del metodo click estamos haciendo un llamado a la función login, la cual nos
+  		nos va a permitir logearnos por medio de nuestra cuenta de gmail-->
+  		&lta class="waves-effect waves-light btn-large red darken-4" (click)="login()">Login&lt/a>
+  	&lt/div>
+  &lt/ng-container>
+
+  &ltng-container *ngIf="_ls.user">
+  	&ltdiv class="container-column">
+      &lt!--En esta parte estamos indicando que por medio del llamado a la función logout vamos a
+      cerrar la sesión del usuario que este dejando su mensaje-->
+    	&lta class="waves-effect waves-light btn-large red darken-4" (click)="logout()">Logout&lt/a>
+      &ltdiv class="chat-window animated fadeIn fast">
+  			&lth3 class="white-text center">Chatea con nosotros&lt/h3>
+  				&lt!--Esta directiva nos permite lograr que por medio de componentes, puedas ir fraccionando
+  				proyecto en este caso, con la etiqueta app-chat estamos indicando que en esa seccion de la
+  			  pagina va a estar contenido la sección de los mensajes y por medio de otro componente se
+  				realizara toda la visulización y estructura del chat-->
+  				&ltapp-chat>&lt/app-chat>
+  		&lt/div>
+  	&lt/div>
+  &lt/ng-container>
+&lt/div>
+          </pre>
+          <h3 class="center white-text">Componente del chat</h3>
+          <pre class="language-markup">
+&ltdiv class="miContainer">
+&lt!--ng-container es un contenedor que es utilizado en angular y ngIf es una directiva
+ que nos permite visualizar cierto tipo de contenido dependiendo si se cumple la condicional o no
+en este caso que _ls.user sea igual a administrador-->
+&ltng-container *ngIf="_ls.user=='administrador'">
+	&ltdiv class="listado-chats grey lighten-1 center">
+		&ltspan class="red-text text-darken-4" id="hola">Mensajes Recibidos&lt/span>
+		&lt!--ngFor es una directiva ciclica que nos va a ayudar a obtener cada uno de los chats personalizados
+		con el pip async estamos indicando que solo queremos los mensajes sin codigo basura -->
+		&ltdiv *ngFor="let chat of _ls.chats | async">
+			&lt!--Aqui estamos indicando que cada chat lo va a mostrar en un boton con el nombre de la persona
+			que te envio el mensaje y al hacerle click va a visualizar el administrador el chat de esa persona
+	  	la parte del |JSON estamos indicando que no lo queremos en un archivo .json si no solo el valor
+			y al hacer click va a mandar a llamar al metodo consultar-->
+		&lta (click)="consultar(chat.uid)" class="waves-effect waves-light btn-large red white-text" id="cambios">Responder a {{chat.nombre |json}}&lt/a>
+		&lt/div>
+	&lt/div>
+&lt/ng-container>
+
+&ltdiv class="container-chat">
+	&ltdiv id="app-mensajes" class="app-mensajes grey lighten-1">
+		&lt!--En esta linea ngFor nos va a permitir obtener los mensajes de la base de datos
+		 que se han enviado del lado del usuario para poder visualizarlos y de igual forma se utiliza el pip
+	 	 async para que se muestra la información sin basura -->
+		&ltdiv *ngFor="let mensaje of _ls.mensajes | async">
+	    &lt!--En la etiqueta span y en la etiqueta p, se estaran mostrando el nombre del usuario y
+			el mensaje que esta enviando o recibiendo -->
+     	&ltspan class="red darken-2 white-text">
+	      {{ mensaje.nombre }}
+	    &lt/span>
+	    &ltp class="grey grey-text text-darken-3">
+	      Q: {{ mensaje.mensaje }}
+	    &lt/p>
+	 	&lt/div>
+	&lt/div>
+&lt!--Este contenedor nos permite enviarle el mensaje al administrador-->
+	&ltng-container *ngIf="_ls.user!='administrador'">
+		&lt!--ngModel nos permite que todo lo que se esta enviando mediante el input, se va a almacenar
+		en una variable llamada mensaje, la cuál va a ser utilizada en el código de javascript-->
+	&ltinput [(ngModel)]="mensaje"
+	        name="mensaje"
+	        (keyup.enter)="enviar()"
+	        placeholder="Deja tu mensaje..."
+					class="grey darken-4 center white-text">
+	&lt!--Con el metodo click que se esta utilizando en la etiqueta a, estamos indicando una llamada a
+	una función que se encuentra en el javascript para enviar los mensajes a la base de datos-->
+	&lta class="waves-effect waves-light btn-large red darken-4" (click)="enviar()">Enviar&lt/a>
+	&lt/ng-container>
+  &lt!--En este contenedor esta haciendo lo mismo que el anterior, pero en este caso son los Mensajes
+  que estara enviando el administrador en respuesta a los chat de cada persona-->
+	&ltng-container *ngIf="_ls.user=='administrador'">
+		&ltinput [(ngModel)]="mensaje"
+	        name="mensaje"
+	        (keyup.enter)="enviarAdm()"
+	        placeholder="Deja tu mensaje..."
+					class="grey darken-4 center white-text">
+		&lta class="waves-effect waves-light btn-large red darken-4" (click)="enviarAdm()">Enviar&lt/a>
+	&lt/ng-container>
+&lt/div>
 &lt/div>
           </pre>
         </div>
 
         <div class="col l6 m12 s12">
-          <h3 class="center white-text">Código JavaScript</h3>
+          <h3 class="center white-text">Código TypeScript</h3>
+          <h3 class="center white-text">Componente principal</h3>
           <pre class="language-markup">
-/*Esta variable config es una variable que se utiliza para Firebase que es una plataforma
-la cual nos va a permitir almacenar todos los comentarios se puede visualizar uan URL donde
-se encuentran almacenados todos los comentarios*/
-
-var config = {
-   apiKey: "AIzaSyCoP1JuA4KkvgtJPx5II1j9C2vV9sbak8o",
-   authDomain: "menu-restaurante.firebaseapp.com",
-   databaseURL: "https://menu-restaurante.firebaseio.com",
-   projectId: "menu-restaurante",
-   storageBucket: "menu-restaurante.appspot.com",
-   messagingSenderId: "327373634763"
-};
-
-/*En esta parte se esta inicializando la base de datos*/
-
-firebase.initializeApp(config);
-
-/*La constante dbref es con la cual mandaremos a llamar a la base de datos dentro de una ramificación
-llamada comentarios/ en la cual estaran alamacenados los datos o archivos JSON ya que al ser una base
-de datos NoSQL cada paquete de información que quieras guardan se almacena en archivos JSON sin necesidad
-de hacer una tabla estructurada
-
-const dbref= firebase.database().ref().child('comentarios/');
-
-/*En esta parte por medio de la constante dbref y el metodo .on estamos indicando que por medio del
-child_added y la funcion con la variable snapshot obtenemos todos los comentarios de la base de datos
-por medio de un array para poder visualizarlos y despues los mandamos al metodo addComment con toda
-la información que se va a visualizar en este caso nombre, comentario y fecha en que comento*/
-
-dbref.on("child_added", function(snapshot) {
-   let comment = snapshot.val();
-   addComment(comment.name, comment.comment, comment.time);
-});
-
-/*Una vez que todos los comentarios ya se obtuvieron es momento de visualizarlos en la pagina por la
-constante addComment y con los atributos que se estan recibiendo de la función vamos a mandar a llamar
-al id comments que es la sección en la cual se van a mostrar los comentarios y despues por el metodo
-ineerHTML indicamos que por medio de las etiquetas h4 mostraremos el nombre de quien comento despues
-la fecha y hora en que se realizo el comentario y despues se mostrara el comentario*/
-
-const addComment = (name, comment, timeStamp) => {
-   let comments = document.getElementById("comments");
-   comments.innerHTML = `&lthr>&lth4 id="t">${name} comento:&ltspan id="letra">${timeStamp}&lt/span>&lt/h4>
-   &ltp id="letra">${comment}&lt/p>${comments.innerHTML}`;
+export class AppComponent {
+  constructor(public _ls:LoginService) { //AQUI SE INICIALIZA LA CLASE DEL SERVICIO
+  }
+  login(){
+    //Se hace el llamado a la función login que se encuentra en el archivo service
+  	this._ls.login();
+  }
+  logout(){
+    //Se hace el llamado a la funcion logout que se encuentra en el archivo service
+  	this._ls.logout();
+  }
+  loginAdministrador(){
+    //Se hace el llamado a la funcion loginAdministrador que se encuentra en el archivo service
+    this._ls.loginAdministrador();
+  }
+  logoutAdministrador(){
+    //se hace el llamado a la funcion logoutAdministrador que se encuentra en el archivo service
+    this._ls.logoutAdministrador();
+  }
 }
+          </pre>
+          <h3 class="center white-text">Componente del chat</h3>
+          <pre class="language-markup">
+/*En esta parte estamos utilizando el componente llamado chat para poder utilizar el javascript*/
+export class ChatComponent implements OnInit {
+  /*Aqui vamos a declarar las variables que vamos a utilizar*/
+	mensaje:string="";
+	elemento:any;
+  uid='';
+  chats;
+  //Por medio de un constructor hacemos referencia al componente service.ts
+  constructor(public _ls:LoginService) {
+    if(this._ls.user!="administrador"){
+      /*Se hace un llamado a la función cargar mensajes que se encuentra en el ts llamado service que
+      nos sirve para cargar los mensajes*/
+      this._ls.cargarMensajes().subscribe( ()=>{
+       console.log("Mensajes cargados....");
+       setTimeout( ()=>this.elemento.scrollTop=this.elemento.scrollHeight, 50);
+      });
+    }else if(this._ls.user="administrador"){
+      /*Se llama a la función cargarChats que esta en service para poder visualizar todo las personas
+      que se han logeado y dejado un mensaje*/
+      this.chats=this._ls.cargarChats().subscribe( ()=>{
+        console.log("Chats cargados...");
+        console.log(this.chats);
+      });
+    }
+  }
+  ngOnInit() {
+    /*Estamos mostrando los mensajes en el div llamado app-mensajes*/
+  	this.elemento = document.getElementById("app-mensajes");
+  }
+  enviar(){
+  	if(this.mensaje.length == 0){
+  		//SI NO HAY NADA ESCRITO EN EL INPUT
+  		return;
+  	}
+    /*Envia el mensaje que se localiza en el input del html*/
+    this._ls.agregarMensaje(this.mensaje);
+    //limpia el input y la variable mensaje para que pueda escribir un nuevo mensaje
+  	this.mensaje="";
+  }
+  enviarAdm(){
+    if(this.mensaje.length == 0){
+    return;
+    }
+    //Envia el mensaje junto con el uid (identificador propio de cada usuario) a la función agregarMensajeAdm
+    this._ls.agregarMensajeAdm(this.mensaje,this.uid);
+    this.mensaje="";
+  }
+  consultar(uid){
+    this.uid=uid;
+    /*Carga los mensajes y los envia a la función cargarMsjUid pero ahora personalizadamente,
+    dependiendo de el usuario que se haya seleccionado*/
+    this._ls.cargarMsjUid(this.uid).subscribe( ()=>{
+      setTimeout( ()=>this.elemento.scrollTop=this.elemento.scrollHeight, 50);
+    });
+  }
+}
+          </pre>
+          <h3 class="center white-text">Componente del service</h3>
+          <pre class="language-markup">
+export class LoginService {
+  user: any;
+  mensajes;
+  chats;
+  //ALMACENA LAS CONVERSACIONES CON LOS DIFERENTES USUARIOS
+  constructor(public db: AngularFireDatabase,
+    public afAuth: AngularFireAuth) {
+    //SE CHECA SI HAY UN USUARIO LOGEADO EN LOCALSTORAGE
+    if( localStorage.getItem('user')){
+      //MIENTRAS SEA DIFERENTE DE ADMINISTRADOR
+      if(localStorage.getItem('user')!='administrador'){
+        //SE OBTIENE DE LOCALSTORAGE Y SE ALMACENA EN LA VARIABLE USER
+        this.user = JSON.parse(localStorage.getItem('user'));
+        //SE ESTABLECE LA RUTA EN LA CUAL ESTARAN GUARDADOS LOS MENSAJES DEL USUARIO
+        this.mensajes = db.list('/chats/'+this.user.user.uid);
+      }else{
+        this.user = localStorage.getItem('user');
+      }
+    }else{
+      this.user = null;
+    }
+    console.log(this.user);
+    }
 
-/*Con la función comentar que se mando a llamar en el metodo Onclick en el HTML una vez que se presiona la
-mandamos a llamar y empieza el proceso del obtención del comentario y guardarlo en la base de datos*/
-
-function Comentar(){
-
-//OBTENER LOS DATOS DEL FORMULARIO
-  /*Por medio de la constante timeStamp estaremos obteniendo el mes, el dia, el año, la hr y los minutos
-  en los cuales se hizo el comentario y vamos a indicar que se va a obtener la fecha local en esta caso de
-  México y que la fecha se tiene que mostrar como se escribe en México*/
-
-  const timeStamp = () => {
-   let options = {
-     month: '2-digit',
-     day: '2-digit',
-     year: '2-digit',
-     hour: '2-digit',
-     minute:'2-digit'
-   };
-   let now = new Date().toLocaleString('es-MX', options);
-   return now;
-  };
-
-  /*Aqui vamos a obtener por medio del getElementById lo que tenga el id de name y el de comment que
-  se especificaron previamente en el documento HTML*/
-
-  let name = document.getElementById("name").value;
-  let comment = document.getElementById("comment").value;
-
-  /*Una vez que se obtuvieron por medio de la constante bdref para mandar a llamar a la base de datos
-  y por medio de push estamos indicando que se tiene que guargar un nuevo documento JSON con sus
-  repectivos campos en este caso el nombre, el comentario y la fecha y hora en la cual se hizo el
-  comentario mandando a llamar al metodo timeStamp*/
-
-  if (name && comment) {
-   dbref.push({
-     name: name,
-     comment: comment,
-     time: timeStamp()
-   });
+  // AUTENTICACION CON GOOGLE
+  login() {
+  /*con esta linea de codigo estamos indicando que nos aparezca en un popUp la ventana en la
+  cual podremos hacer el logeo con GOOGLE*/
+  this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider(),)
+  .then(result=>{
+  /*con esta linea de codigo estamos indicando que cuando un usuario ya haya registrado
+  una visita al sitio, pueda guardarse su nombre de usuaurio y su key para poder mostrar
+  el chat que ha tenido*/
+  this.db.list('/usuarios').update(result.user.uid,{
+    uid:result.user.uid,
+    nombre:result.user.displayName
+  });
+  this.user=result;
+  //UNA VEZ QUE EL USUARIO SE AUTENTICA Y SE OBTIENEN SUS DATOS SE ALMACENAN EN LOCALSTORAGE
+  localStorage.setItem('user', JSON.stringify(result) );
+  });
   }
 
-  /*En esta sección estamos indicando que una vez que el comentario ha sido agregado a la base de datos
-  los campos con el id name y el id comment tienen que borrar lo que se escribio para que un nuevo
-  comentario pueda ser agregado*/
+  /*función del boton del logout*/
+  logout() {
+    /*Aqui estamos indicando que por medio de la variable localStorage y la propiedad removeItem
+    lo que contenga user, en este caso el nombre del usuario, pasara a null*/
+    localStorage.removeItem('user');
+    this.user = null;
+    /*con la funcion signOut estamos cerrando la sesión del usuario y nos mandara un mensaje en la
+    consola que nos indique que la sesión fue cerrada exitosamente */
+    this.afAuth.auth.signOut().then(function(){
+      console.log("sign-out successful");
+    });
+  }
+  agregarMensaje(text:string){
+    /*con la variable mensajes que arriba inicializamos en el constructor e indicamos la ruta donde
+    la información de esa variable estara almacenada en la base de datos, ahora estamos indicando la
+    estructura que va a tener en los archivos JSON cada mensaje*/
+    let mensaje={
+      nombre:  this.user.user.displayName,
+      mensaje:text
+    }
+    //Aqui estamos agregando el mensaje a la base de datos
+    this.mensajes.push(mensaje);
+  }
 
-  document.getElementById("name").value = '';
-  document.getElementById("comment").value = '';
+  agregarMensajeAdm(text:string, uid){
+    /*En esta linea estamos indicando el formato que va a tener el documento JSON al momento de guardar
+    el mensaje del administrador hacia el usurio*/
+    let mensaje={
+      nombre: 'administrador',
+      mensaje:text
+    }
+    /*En esta linea de código estamos indicando la ruta donde se almacenara el mensaje y despues con el
+    metodo push lo estamos almacenando en firebase (En este caso, estamos indicando la ruta donde el
+    mensaje personalizado debe de ir ya que cada documento JSON es un usurio y le indicamos en que
+    documento JSON se tiene que almacenar dependiendo del usuario al cuál esta contestando)*/
+    this.db.list('/chats/'+uid).push(mensaje);
+  }
 
-  /*las siguientes dos funciones hacen el mismo procedimiento que las primeras pero en este caso es unicamente
-  para poder obtener de la base de datos y poder visualizar el comentario que se acaba de realizar*/
-
-  dbref.on("child_added", function(snapshot) {
-   let comment = snapshot.val();
-     addComment(comment.name, comment.comment, comment.time);
-   });
-
-   const addComment = (name, comment, timeStamp) => {
-     let comments = document.getElementById("comments");
-     comments.innerHTML = `&lthr>&lth4>${name} says&ltspan>${timeStamp}&lt/span>&lt/h4>&ltp>${comment}
-     &lt/p>${comments.innerHTML}`;
-   }
- }
+  /*Con esta función estamos mostrando en pantalla los mensajes que el usuario ha enviado y de igual
+  forma los mensajes que el administrador le ha enviado*/
+  cargarMensajes(){
+    this.mensajes = this.db.list('/chats/'+this.user.user.uid,{
+    query: {
+    //Se ordenan por clave para que los mensajes mas recientes aparezcan al ultimo
+    orderByKey:true
+    }
+    });
+    return this.mensajes;
+  }
+  /*Con esta función estas mostrando individualmente cada mensaje que le ha enviado cada usuario al
+  administrador y de igual forma los que el administrador le ha enviado al usuario*/
+  cargarMsjUid(uid){
+    this.mensajes = this.db.list('/chats/'+uid,{
+      query: {
+        //Se ordenan por clave para que los mensajes mas recientes aparezcan al ultimo
+        orderByKey:true
+      }
+    });
+    return this.mensajes;
+  }
+  /*Con esta funcion, estamos cargando todos las personas que han dejado mensajes para que los pueda
+  visualizar el administrador individualmente*/
+  cargarChats(){
+    this.chats = this.db.list('/usuarios/',{
+      query:{
+        orderByKey:true
+      }
+    });
+    return this.chats;
+  }
+  //Login del administrador
+  loginAdministrador(){
+    this.logout();
+    this.user="administrador"
+    localStorage.setItem('user',this.user);
+  }
+  //Logout del administrador
+  logoutAdministrador(){
+    console.log("adm deslogueado");
+    localStorage.removeItem('user');
+    this.user=null;
+  }
+}
           </pre>
         </div>
       </div>
 
-      <!-------------------Scripts------------------>
+      <!------------------Scripts------------------>
       <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     	<script type="text/javascript" src="./js/app.js"></script>
